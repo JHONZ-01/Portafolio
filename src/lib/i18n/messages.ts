@@ -21,6 +21,12 @@ export type MessageKey =
   | "sections.about.stats.clients"
   | "sections.skills.title"
   | "sections.skills.subtitle"
+  | "sections.skills.level.intermediate"
+  | "sections.skills.level.basic"
+  | "sections.skills.level.learning"
+  | "sections.languages.title"
+  | "sections.languages.subtitle"
+  | "sections.languages.level"
   | "sections.experience.title"
   | "sections.experience.subtitle"
   | "sections.experience.current"
@@ -30,7 +36,10 @@ export type MessageKey =
   | "sections.contact.subtitle"
   | "contact.emailLabel"
   | "contact.locationLabel"
-  | "contact.locationValue"
+  | "contact.phonePrimaryLabel"
+  | "contact.phoneSecondaryLabel"
+  | "contact.hoursLabel"
+  | "contact.noteLabel"
   | "contact.form.name"
   | "contact.form.email"
   | "contact.form.subject"
@@ -55,30 +64,38 @@ export const messages: Record<Lang, Messages> = {
     "actions.toggleTheme": "Cambiar tema",
     "actions.toggleLang": "Cambiar idioma",
 
-    "home.devTagline": "Desarrollador/a · Portafolio",
+    "home.devTagline": "Tecnólogo en Desarrollo de Software · Portafolio",
     "home.titlePrefix": "const",
-    "home.titleValue": "Developer",
+    "home.titleValue": "Jhon Paucar",
     "home.description":
-      "Portafolio profesional con foco en rendimiento, calidad y una base mantenible. Cada sección está construida con componentes y animaciones declarativas.",
+      "Tecnólogo en Desarrollo de Software en proceso de graduación (2025), con experiencia práctica en el sector empresarial: desarrollo de soluciones internas, soporte técnico Android y administración de plataformas web de crédito.",
     "home.ctaProjects": "Ver proyectos",
     "home.ctaContact": "Contactar",
 
     "sections.about.title": "Sobre mí",
     "sections.about.subtitle":
-      "Introducción + métricas, adaptado del template pero en componentes.",
+      "Perfil profesional, formación y enfoque de crecimiento continuo.",
     "sections.about.body":
-      "Soy un/a desarrollador/a Full Stack con experiencia construyendo aplicaciones web modernas. Me enfoco en arquitecturas limpias, rendimiento y una UX cuidada.",
+      "Soy Jhon Paucar, tecnólogo en Desarrollo de Software (en proceso de titulación) y Programador Junior & Técnico de Servicio en una empresa de créditos para adquisición de celulares. Mi trabajo combina desarrollo de herramientas internas y operación/soporte: instalación y configuración de apps de candado (MDM), gestión de plataformas de crédito, soporte Android y actualización de sitios corporativos. Tengo base sólida en desarrollo web y tecnologías Microsoft (C#/.NET) y estoy fortaleciendo habilidades en React + Tailwind y PHP + Laravel, además de integración de APIs REST.",
     "sections.about.stats.projects": "Proyectos",
     "sections.about.stats.years": "Años",
     "sections.about.stats.clients": "Clientes",
 
-    "sections.skills.title": "Skills",
+    "sections.skills.title": "Habilidades",
     "sections.skills.subtitle":
-      "Migradas del template con animación declarativa en framer-motion.",
+      "Stack actual, tecnologías en aprendizaje y herramientas operativas del día a día.",
+    "sections.skills.level.intermediate": "Intermedio",
+    "sections.skills.level.basic": "Básico",
+    "sections.skills.level.learning": "En aprendizaje",
+
+    "sections.languages.title": "Idiomas",
+    "sections.languages.subtitle":
+      "Idiomas de comunicación. Puedes reemplazar las banderas en /public/images.",
+    "sections.languages.level": "Nivel: por definir",
 
     "sections.experience.title": "Experiencia",
     "sections.experience.subtitle":
-      "Timeline migrada del template; ahora es data-driven y animada.",
+      "Experiencia real en empresa: desarrollo + soporte técnico y operación.",
     "sections.experience.current": "Actual",
 
     "sections.projects.title": "Proyectos",
@@ -87,10 +104,13 @@ export const messages: Record<Lang, Messages> = {
 
     "sections.contact.title": "Contacto",
     "sections.contact.subtitle":
-      "Formulario migrado del template. El siguiente paso es conectarlo a envío real.",
+      "Datos de contacto y formulario. Sustituye teléfonos y email en src/lib/contact.ts.",
     "contact.emailLabel": "Email",
     "contact.locationLabel": "Ubicación",
-    "contact.locationValue": "Tu ciudad, tu país",
+    "contact.phonePrimaryLabel": "Teléfono",
+    "contact.phoneSecondaryLabel": "Teléfono alternativo",
+    "contact.hoursLabel": "Horario",
+    "contact.noteLabel": "Información adicional",
     "contact.form.name": "Nombre",
     "contact.form.email": "Email",
     "contact.form.subject": "Asunto",
@@ -108,7 +128,7 @@ export const messages: Record<Lang, Messages> = {
       "Aquí vive el grid migrado del template. Próximo paso: datos reales y páginas de detalle.",
 
     "footer.copyright":
-      "© {year} Kevin Simba. Todos los derechos reservados.",
+      "© {year} Jhon Paucar. Todos los derechos reservados.",
   },
   en: {
     brand: "Portfolio",
@@ -118,30 +138,38 @@ export const messages: Record<Lang, Messages> = {
     "actions.toggleTheme": "Toggle theme",
     "actions.toggleLang": "Toggle language",
 
-    "home.devTagline": "Developer · Portfolio",
+    "home.devTagline": "Software Development Technologist · Portfolio",
     "home.titlePrefix": "const",
-    "home.titleValue": "Developer",
+    "home.titleValue": "Jhon Paucar",
     "home.description":
-      "Professional portfolio focused on performance, quality, and a maintainable foundation. Each section is built with components and declarative animations.",
+      "Software Development Technologist (graduation in progress, 2025) with hands-on experience: internal tooling, Android support, and credit-platform web operations.",
     "home.ctaProjects": "View projects",
     "home.ctaContact": "Contact",
 
     "sections.about.title": "About",
     "sections.about.subtitle":
-      "Intro + stats, adapted from the template but componentized.",
+      "Professional profile, education, and continuous learning.",
     "sections.about.body":
-      "I’m a Full Stack developer with experience building modern web applications. I focus on clean architecture, performance, and polished UX.",
+      "I’m Jhon Paucar, a Software Development Technologist (degree in progress) and a Junior Programmer & Service Technician at a company that provides phone credit programs. My role blends internal development with hands-on operations: MDM lock app setup, credit platform management, Android device support, and corporate website updates. I have a solid base in web development and Microsoft technologies (C#/.NET) and I’m strengthening skills in React + Tailwind and PHP + Laravel, plus REST API integration.",
     "sections.about.stats.projects": "Projects",
     "sections.about.stats.years": "Years",
     "sections.about.stats.clients": "Clients",
 
     "sections.skills.title": "Skills",
     "sections.skills.subtitle":
-      "Migrated from the template with framer-motion declarative animation.",
+      "Current stack, in-progress learning, and day-to-day tooling.",
+    "sections.skills.level.intermediate": "Intermediate",
+    "sections.skills.level.basic": "Basic",
+    "sections.skills.level.learning": "Learning",
+
+    "sections.languages.title": "Languages",
+    "sections.languages.subtitle":
+      "Communication languages. Replace flag images in /public/images.",
+    "sections.languages.level": "Level: TBD",
 
     "sections.experience.title": "Experience",
     "sections.experience.subtitle":
-      "Template timeline migrated; now data-driven and animated.",
+      "Real company experience: development + technical support and operations.",
     "sections.experience.current": "Current",
 
     "sections.projects.title": "Projects",
@@ -150,10 +178,13 @@ export const messages: Record<Lang, Messages> = {
 
     "sections.contact.title": "Contact",
     "sections.contact.subtitle":
-      "Form migrated from the template. Next step is wiring real delivery.",
+      "Contact details and form. Replace phones and email in src/lib/contact.ts.",
     "contact.emailLabel": "Email",
     "contact.locationLabel": "Location",
-    "contact.locationValue": "Your city, your country",
+    "contact.phonePrimaryLabel": "Phone",
+    "contact.phoneSecondaryLabel": "Alternate phone",
+    "contact.hoursLabel": "Availability",
+    "contact.noteLabel": "Additional information",
     "contact.form.name": "Name",
     "contact.form.email": "Email",
     "contact.form.subject": "Subject",
@@ -170,6 +201,6 @@ export const messages: Record<Lang, Messages> = {
     "pages.projects.subtitle":
       "This page hosts the template-migrated grid. Next: real data and detail pages.",
 
-    "footer.copyright": "© {year} Kevin Simba. All rights reserved.",
+    "footer.copyright": "© {year} Jhon Paucar. All rights reserved.",
   },
 };

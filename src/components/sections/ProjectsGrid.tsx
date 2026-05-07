@@ -4,7 +4,9 @@ import Link from "next/link";
 import { Code, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 
+import { CircuitFxCanvas } from "@/components/layout/CircuitFxCanvas";
 import { Card } from "@/components/ui/Card";
+import { SocialLinks } from "@/components/ui/SocialLinks";
 import { useT } from "@/lib/i18n/useT";
 
 type Project = {
@@ -55,8 +57,9 @@ export function ProjectsGrid() {
             {t("sections.projects.subtitle")}
           </p>
         </div>
-        <div className="hidden font-mono text-sm text-[var(--text-muted)] sm:block">
-          {"<projects />"}
+        <div className="hidden items-center gap-4 sm:flex">
+          <SocialLinks size="sm" />
+          <div className="font-mono text-sm text-[var(--text-muted)]">{"<projects />"}</div>
         </div>
       </div>
 
@@ -70,11 +73,18 @@ export function ProjectsGrid() {
             transition={{ duration: 0.55, delay: idx * 0.06 }}
           >
             <Card className="group relative overflow-hidden p-0">
-              <div className="relative flex h-44 items-center justify-center bg-[var(--bg-darker)]">
-                <div className="text-4xl text-[var(--text-muted)] transition-transform duration-300 group-hover:scale-110">
+              <div className="relative flex h-44 items-center justify-center overflow-hidden bg-[var(--bg-darker)]">
+                {idx === 0 ? (
+                  <CircuitFxCanvas
+                    mode="border"
+                    particleCount={28}
+                    glowBlur={7}
+                  />
+                ) : null}
+                <div className="relative z-10 text-4xl text-[var(--text-muted)] transition-transform duration-300 group-hover:scale-110">
                   {"</>"}
                 </div>
-                <div className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                <div className="absolute inset-0 z-20 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                   <div className="absolute inset-0 bg-black/60" />
                   <div className="relative flex h-full items-center justify-center gap-3">
                     {p.href ? (

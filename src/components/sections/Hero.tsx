@@ -3,8 +3,9 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 
+import { CircuitFxCanvas } from "@/components/layout/CircuitFxCanvas";
 import { Button } from "@/components/ui/Button";
-import { Particles } from "@/components/sections/Particles";
+import { SocialLinks } from "@/components/ui/SocialLinks";
 import { useT } from "@/lib/i18n/useT";
 
 export function Hero() {
@@ -12,11 +13,6 @@ export function Hero() {
 
   return (
     <section className="relative overflow-hidden py-16 sm:py-20">
-      <div className="pointer-events-none absolute inset-0">
-        <div className="code-grid-bg absolute inset-0" />
-        <Particles />
-      </div>
-
       <div className="relative grid gap-10 lg:grid-cols-2 lg:items-center">
         <div className="space-y-6">
           <motion.p
@@ -37,7 +33,7 @@ export function Hero() {
             <span className="font-mono text-[var(--text-muted)]">
               {t("home.titlePrefix")}
             </span>{" "}
-            <span className="bg-[var(--gradient-1)] bg-clip-text text-transparent">
+            <span className="typewriter text-[var(--primary)]">
               {t("home.titleValue")}
             </span>
             <span className="blink-cursor font-mono text-[var(--text-muted)]">
@@ -53,6 +49,14 @@ export function Hero() {
           >
             {t("home.description")}
           </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.12 }}
+          >
+            <SocialLinks />
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -73,9 +77,15 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="relative mx-auto flex h-64 w-64 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--bg-card)]/60 shadow-sm backdrop-blur sm:h-80 sm:w-80"
+          className="relative mx-auto flex h-64 w-64 items-center justify-center overflow-hidden rounded-full border border-[var(--border)] bg-[var(--bg-card)]/60 shadow-sm backdrop-blur sm:h-80 sm:w-80"
         >
-          <div className="text-center">
+          <CircuitFxCanvas
+            mode="full"
+            showChips={false}
+            particleCount={40}
+            glowBlur={10}
+          />
+          <div className="relative z-10 text-center">
             <div className="text-5xl text-[var(--text-muted)]">{"</>"}</div>
             <p className="mt-3 text-sm text-[var(--text-secondary)]">
               Foto / avatar aquí

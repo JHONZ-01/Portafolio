@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { Card } from "@/components/ui/Card";
+import { SocialLinks } from "@/components/ui/SocialLinks";
 
 const projects = [
   {
@@ -32,12 +33,15 @@ export function Projects() {
             Una selección corta para navegar rápido.
           </p>
         </div>
-        <Link
-          href="/projects"
-          className="text-sm font-medium text-zinc-900 underline-offset-4 hover:underline dark:text-zinc-50"
-        >
-          Ver todos
-        </Link>
+        <div className="hidden items-center gap-4 sm:flex">
+          <SocialLinks size="sm" />
+          <Link
+            href="/projects"
+            className="text-sm font-medium text-zinc-900 underline-offset-4 hover:underline dark:text-zinc-50"
+          >
+            Ver todos
+          </Link>
+        </div>
       </div>
 
       <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

@@ -189,3 +189,60 @@ npm run lint
 npm run build
 ```
 
+---
+
+## Actualización — cambios realizados (6 de mayo de 2026)
+
+Esta sección **se añade** al informe anterior sin sustituirlo. Resume mejoras funcionales, de contenido, de UI/UX y de arquitectura implementadas en la fecha indicada.
+
+### Estilos (`src/styles/portfolio.css` y `globals.css`)
+
+- **Paleta ampliada**: tokens adicionales (`--warning`, `--danger`, `--info`, gama de colores nombrados, `--gradient-warm`, `--gradient-danger`, etc.).
+- **Bordes por tema**: `--border` en oscuro (`#6395F8`) y en claro (`#052970`) manteniendo `--border-subtle` para usos más suaves.
+- **Fondo / partículas de la cuadrícula**: variables `--grid-opacity`, `--particle-color`, `--particle-opacity`, `--particle-size`; ajuste de visibilidad en tema claro.
+- **Animación typewriter** (`.typewriter`, `@keyframes typeReveal`) para el título del Hero, con respeto a `prefers-reduced-motion`.
+- **Circuit FX (canvas)**: variables `--circuit-*` (fade, neon, bus, chips), `--circuit-embed-opacity`, clase `.circuit-fx-canvas`.
+- **Barras de habilidades por nivel**: `--skill-bar-intermediate`, `--skill-bar-basic`, `--skill-bar-learning` (con variantes en `[data-theme="light"]` para contraste).
+- **Scroll horizontal**: `overflow-x: hidden` en `html, body` (`globals.css`); `overflow-hidden` en el contenedor de `PageBackground` para recortar el grid animado.
+
+### Internacionalización y contenido real (`src/lib/i18n/messages.ts` y datos del CV)
+
+- Textos del portfolio alineados al perfil profesional (nombre **Jhon Paucar**, rol, experiencia en empresa de créditos, MDM/Android, stack C#/.NET, aprendizaje React/Laravel, etc.) en **es** y **en**.
+- Footer y metadatos de copyright actualizados al titular correcto.
+- Nuevas claves: sección **Idiomas** (`sections.languages.*`), niveles de habilidades (`sections.skills.level.*`), contacto ampliado (`contact.phonePrimaryLabel`, `contact.phoneSecondaryLabel`, `contact.hoursLabel`, `contact.noteLabel`). Se dejó de usar `contact.locationValue` en i18n; la ubicación pasa a `src/lib/contact.ts`.
+
+### Datos de contacto centralizados (`src/lib/contact.ts`)
+
+- Archivo con email, teléfonos (principal y opcional), ubicación, horario y nota informativa (placeholders editables por el titular del portfolio).
+
+### Componentes nuevos o relevantes
+
+- **`PageBackground`**: fondo global (cuadrícula + componente `Particles`) en páginas que lo montan; capa con `overflow-hidden`.
+- **`CircuitFxCanvas`** (`src/components/layout/CircuitFxCanvas.tsx`): canvas con **modos** `full` (buses + L en esquinas + partículas con glow; chips opcionales) y `border` (trazado perimetral + partículas en aristas). Props: `showChips`, `particleCount`, `glowBlur`, `chipLabel`. Soporte de **`prefers-reduced-motion`** (dibujo estático sin animación continua).
+- **`AboutCircuitBackground`**: alias hacia `CircuitFxCanvas` en modo `full` con chips, por compatibilidad.
+- **`SocialLinks`** + **`src/lib/social.ts`**: enlaces redondos a redes (GitHub, LinkedIn, Instagram, Facebook) con iconos SVG inline por compatibilidad con la versión de `lucide-react` usada.
+- **`Languages`**: sección de idiomas con banderas desde rutas públicas `/images/es.png` y `/images/en.png` (el usuario coloca los assets en `public/images/`).
+
+### Secciones y páginas modificadas
+
+- **`Hero.tsx`**: animación del valor del título; color visible del nombre; redes sociales; avatar con **`CircuitFxCanvas`** (`mode="full"`, sin chips) detrás del contenido.
+- **`Skills.tsx`**: sin porcentajes visibles; niveles **Intermedio / Básico / En aprendizaje** con etiquetas i18n y barras coloreadas (verde / ámbar / violeta) y anchos de animación discretos (85 % / 55 % / 35 % no mostrados al usuario).
+- **`ContactForm.tsx`**: panel de datos con email, teléfonos (`tel:`), ubicación, horario, nota; uso de `contact.ts`; **circuito** en modo `border` en la card izquierda.
+- **`About.tsx`**: primera tarjeta de texto con **circuito** en modo `border`.
+- **`ProjectsGrid.tsx`**: primera tarjeta de proyecto con **circuito** en la franja superior del preview; overlay de enlaces con `z-index` adecuado.
+- **`src/app/about/page.tsx`**: eliminado el canvas de página completa (solo `PageBackground`); el efecto “CPU/buses” queda solo como **embed** en contenedores donde se monta `CircuitFxCanvas`.
+- **`src/app/page.tsx`** / **`about/page.tsx`** / **`projects/page.tsx`**: uso de `PageBackground` donde corresponde; Home incluye sección `Languages`.
+
+### Internacionalización — uso (`useT`)
+
+- El sistema de mensajes tipados (`MessageKey`) se amplió con las claves nuevas citadas arriba sin romper el flujo existente de `useT`.
+
+### Calidad y verificación
+
+- Tras los cambios, el proyecto se verificó con **`npm run build`** (compilación correcta).
+
+### Notas para continuidad
+
+- Sustituir placeholders en **`src/lib/contact.ts`** y en **`src/lib/social.ts`** (URLs reales) y colocar banderas en **`public/images/`**.
+- Ajustar opacidad del circuito embebido vía **`--circuit-embed-opacity`** en `portfolio.css` si se desea más o menos presencia visual.
+

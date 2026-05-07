@@ -3,8 +3,10 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 
+import { CircuitFxCanvas } from "@/components/layout/CircuitFxCanvas";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
+import { contactInfo } from "@/lib/contact";
 import { useT } from "@/lib/i18n/useT";
 
 type Status = "idle" | "sending" | "success" | "error";
@@ -14,12 +16,15 @@ export function ContactForm() {
   const [status, setStatus] = React.useState<Status>("idle");
   const [error, setError] = React.useState<string | null>(null);
 
+  const hasSecondaryPhone =
+    Boolean(contactInfo.phoneSecondaryDisplay) &&
+    Boolean(contactInfo.phoneSecondaryTel);
+
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setError(null);
     setStatus("sending");
 
-    // Placeholder: aquí conectaremos un endpoint (Route Handler) o proveedor de email.
     await new Promise((r) => setTimeout(r, 700));
 
     setStatus("success");
@@ -43,25 +48,73 @@ export function ContactForm() {
       </div>
 
       <div className="mt-6 grid gap-4 lg:grid-cols-2">
-        <Card className="space-y-3">
-          <div>
-            <p className="text-sm text-[var(--text-secondary)]">
-              {t("contact.emailLabel")}
-            </p>
-            <a
-              className="font-mono text-sm font-medium text-[var(--text-primary)] underline-offset-4 hover:underline"
-              href="mailto:tu-email@ejemplo.com"
-            >
-              tu-email@ejemplo.com
-            </a>
-          </div>
-          <div>
-            <p className="text-sm text-[var(--text-secondary)]">
-              {t("contact.locationLabel")}
-            </p>
-            <p className="text-sm text-[var(--text-primary)]">
-              {t("contact.locationValue")}
-            </p>
+        <Card className="relative overflow-hidden">
+          <CircuitFxCanvas mode="border" particleCount={44} glowBlur={8} />
+          <div className="relative z-10 space-y-4">
+            <div>
+              <p className="text-sm text-[var(--text-secondary)]">
+                {t("contact.emailLabel")}
+              </p>
+              <a
+                className="font-mono text-sm font-medium text-[var(--text-primary)] underline-offset-4 hover:underline"
+                href={`mailto:${contactInfo.email}`}
+              >
+                {contactInfo.email}
+              </a>
+            </div>
+
+            <div>
+              <p className="text-sm text-[var(--text-secondary)]">
+                {t("contact.phonePrimaryLabel")}
+              </p>
+              <a
+                className="font-mono text-sm font-medium text-[var(--text-primary)] underline-offset-4 hover:underline"
+                href={`tel:${contactInfo.phonePrimaryTel}`}
+              >
+                {contactInfo.phonePrimaryDisplay}
+              </a>
+            </div>
+
+            {hasSecondaryPhone ? (
+              <div>
+                <p className="text-sm text-[var(--text-secondary)]">
+                  {t("contact.phoneSecondaryLabel")}
+                </p>
+                <a
+                  className="font-mono text-sm font-medium text-[var(--text-primary)] underline-offset-4 hover:underline"
+                  href={`tel:${contactInfo.phoneSecondaryTel}`}
+                >
+                  {contactInfo.phoneSecondaryDisplay}
+                </a>
+              </div>
+            ) : null}
+
+            <div>
+              <p className="text-sm text-[var(--text-secondary)]">
+                {t("contact.locationLabel")}
+              </p>
+              <p className="text-sm text-[var(--text-primary)]">
+                {contactInfo.location}
+              </p>
+            </div>
+
+            <div>
+              <p className="text-sm text-[var(--text-secondary)]">
+                {t("contact.hoursLabel")}
+              </p>
+              <p className="text-sm text-[var(--text-primary)]">
+                {contactInfo.hours}
+              </p>
+            </div>
+
+            <div>
+              <p className="text-sm text-[var(--text-secondary)]">
+                {t("contact.noteLabel")}
+              </p>
+              <p className="text-sm leading-6 text-[var(--text-primary)]">
+                {contactInfo.note}
+              </p>
+            </div>
           </div>
         </Card>
 

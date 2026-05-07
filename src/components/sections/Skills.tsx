@@ -4,58 +4,103 @@ import { motion } from "framer-motion";
 
 import { Card } from "@/components/ui/Card";
 import { useT } from "@/lib/i18n/useT";
+import { cn } from "@/lib/utils";
+
+export type SkillLevel = "intermediate" | "basic" | "learning";
 
 type Skill = {
   name: string;
-  percent: number;
+  level: SkillLevel;
+};
+
+/** Ancho de barra solo para animación (no se muestra el número). */
+const LEVEL_WIDTH: Record<SkillLevel, number> = {
+  intermediate: 85,
+  basic: 55,
+  learning: 35,
 };
 
 const skills: { title: string; items: Skill[] }[] = [
   {
     title: "Frontend",
     items: [
-      { name: "React", percent: 95 },
-      { name: "Next.js", percent: 88 },
-      { name: "TypeScript", percent: 90 },
-      { name: "Tailwind", percent: 90 },
+      { name: "HTML5", level: "intermediate" },
+      { name: "CSS3", level: "intermediate" },
+      { name: "JavaScript", level: "basic" },
+      { name: "Bootstrap", level: "basic" },
+      { name: "React.js", level: "learning" },
+      { name: "Tailwind CSS", level: "learning" },
     ],
   },
   {
     title: "Backend",
     items: [
-      { name: "Node.js", percent: 92 },
-      { name: "APIs", percent: 90 },
-      { name: "PostgreSQL", percent: 80 },
-      { name: "MongoDB", percent: 85 },
+      { name: "C# / .NET", level: "intermediate" },
+      { name: "SQL", level: "basic" },
+      { name: "PHP", level: "basic" },
+      { name: "APIs REST", level: "basic" },
+      { name: "Laravel", level: "learning" },
     ],
   },
   {
-    title: "Tools & Others",
+    title: "Móvil & Otros",
     items: [
-      { name: "Git", percent: 95 },
-      { name: "Docker", percent: 75 },
-      { name: "AWS", percent: 70 },
-      { name: "Figma", percent: 88 },
+      { name: "Android", level: "basic" },
+      { name: "Apps de candado (MDM)", level: "intermediate" },
+      { name: "Plataformas web (operación)", level: "intermediate" },
+      { name: "Git / GitHub", level: "basic" },
     ],
   },
 ];
 
-function SkillRow({ name, percent }: Skill) {
+function levelLabelKey(level: SkillLevel) {
+  switch (level) {
+    case "intermediate":
+      return "sections.skills.level.intermediate" as const;
+    case "basic":
+      return "sections.skills.level.basic" as const;
+    case "learning":
+      return "sections.skills.level.learning" as const;
+  }
+}
+
+function barColorClass(level: SkillLevel) {
+  switch (level) {
+    case "intermediate":
+      return "bg-[var(--skill-bar-intermediate)]";
+    case "basic":
+      return "bg-[var(--skill-bar-basic)]";
+    case "learning":
+      return "bg-[var(--skill-bar-learning)]";
+  }
+}
+
+function SkillRow({ name, level }: Skill) {
+  const { t } = useT();
+  const w = LEVEL_WIDTH[level];
   return (
     <div className="space-y-2">
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between gap-2">
         <span className="font-mono text-sm font-medium text-[var(--text-secondary)]">
           {name}
         </span>
-        <span className="font-mono text-sm font-medium text-[var(--text-muted)]">
-          {percent}%
+        <span
+          className={cn(
+            "shrink-0 rounded-full px-2 py-0.5 font-mono text-xs font-semibold",
+            level === "intermediate" && "bg-emerald-500/15 text-emerald-600 dark:text-emerald-400",
+            level === "basic" && "bg-amber-500/15 text-amber-700 dark:text-amber-400",
+            level === "learning" &&
+              "bg-violet-500/15 text-violet-700 dark:text-violet-400",
+          )}
+        >
+          {t(levelLabelKey(level))}
         </span>
       </div>
       <div className="h-3 overflow-hidden rounded-full border border-[var(--border)] bg-[var(--bg-darker)]">
         <motion.div
-          className="h-full rounded-full bg-[var(--gradient-1)]"
+          className={cn("h-full rounded-full transition-colors", barColorClass(level))}
           initial={{ width: 0 }}
-          whileInView={{ width: `${percent}%` }}
+          whileInView={{ width: `${w}%` }}
           viewport={{ once: true, amount: 0.6 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
         />

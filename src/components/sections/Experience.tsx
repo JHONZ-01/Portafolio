@@ -16,29 +16,13 @@ type ExperienceItem = {
 
 const items: ExperienceItem[] = [
   {
-    period: "2022 - Presente",
-    role: "Senior Full Stack Developer",
-    company: "Tech Company Inc.",
+    period: "2025 - Presente",
+    role: "Programador Junior & Técnico de Servicio",
+    company: "Empresa de Créditos para Celulares",
     description:
-      "Lideré iniciativas de arquitectura, optimización de rendimiento y entrega continua para aplicaciones web complejas.",
-    tags: ["React", "Node.js", "TypeScript", "Docker", "AWS"],
+      "Desarrollo de soluciones internas y soporte operativo: instalación/configuración de apps de candado (MDM), gestión de plataformas de crédito, soporte técnico Android y actualización de páginas web corporativas.",
+    tags: ["C#/.NET", "SQL", "Android", "MDM", "Git", "PHP (base)"],
     current: true,
-  },
-  {
-    period: "2020 - 2022",
-    role: "Frontend Developer",
-    company: "Digital Solutions",
-    description:
-      "Construcción de interfaces accesibles y optimizadas, con colaboración cercana con diseño para entregas pixel-perfect.",
-    tags: ["React", "Vue", "JavaScript", "SASS"],
-  },
-  {
-    period: "2018 - 2020",
-    role: "Junior Developer",
-    company: "Creative Studio",
-    description:
-      "Implementación de sitios y componentes reutilizables, consolidando bases de frontend moderno y buenas prácticas.",
-    tags: ["HTML", "CSS", "JavaScript"],
   },
 ];
 
