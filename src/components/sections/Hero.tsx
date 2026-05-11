@@ -19,7 +19,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-sm font-medium text-[var(--text-secondary)]"
+            className="text-sm font-medium text-palette-type"
           >
             {t("home.devTagline")}
           </motion.p>
@@ -30,7 +30,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.05 }}
             className="text-4xl font-semibold leading-tight tracking-tight text-[var(--text-primary)] sm:text-5xl"
           >
-            <span className="font-mono text-[var(--text-muted)]">
+            <span className="font-mono text-palette-comment">
               {t("home.titlePrefix")}
             </span>{" "}
             <span className="typewriter text-[var(--primary)]">
@@ -66,6 +66,9 @@ export function Hero() {
           >
             <Link href="/projects">
               <Button>{t("home.ctaProjects")}</Button>
+            </Link>
+            <Link href="/cv">
+              <Button variant="ghost">CV</Button>
             </Link>
             <a href="#contact">
               <Button variant="secondary">{t("home.ctaContact")}</Button>

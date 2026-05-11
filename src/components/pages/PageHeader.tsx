@@ -17,7 +17,7 @@ export function PageHeader({
       <h1 className="text-3xl font-semibold tracking-tight text-[var(--text-primary)]">
         {t(titleKey)}
       </h1>
-      <p className="mt-2 text-[var(--text-secondary)]">{t(subtitleKey)}</p>
+      <p className="mt-2 text-palette-type">{t(subtitleKey)}</p>
     </>
   );
 }

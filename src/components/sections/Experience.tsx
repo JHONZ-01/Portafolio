@@ -1,5 +1,6 @@
 "use client";
 
+import { useMemo } from "react";
 import { motion } from "framer-motion";
 
 import { Card } from "@/components/ui/Card";
@@ -14,20 +15,25 @@ type ExperienceItem = {
   current?: boolean;
 };
 
-const items: ExperienceItem[] = [
-  {
-    period: "2025 - Presente",
-    role: "Programador Junior & Técnico de Servicio",
-    company: "Empresa de Créditos para Celulares",
-    description:
-      "Desarrollo de soluciones internas y soporte operativo: instalación/configuración de apps de candado (MDM), gestión de plataformas de crédito, soporte técnico Android y actualización de páginas web corporativas.",
-    tags: ["C#/.NET", "SQL", "Android", "MDM", "Git", "PHP (base)"],
-    current: true,
-  },
-];
-
 export function Experience() {
   const { t } = useT();
+
+  const items = useMemo<ExperienceItem[]>(
+    () => [
+      {
+        period: t("sections.experience.job1.period"),
+        role: t("sections.experience.job1.role"),
+        company: t("sections.experience.job1.company"),
+        description: t("sections.experience.job1.description"),
+        tags: t("sections.experience.job1.tags")
+          .split(",")
+          .map((s) => s.trim())
+          .filter(Boolean),
+        current: true,
+      },
+    ],
+    [t],
+  );
 
   return (
     <section className="py-12">
@@ -77,12 +83,12 @@ export function Experience() {
                 {it.description}
               </p>
               <ul className="flex flex-wrap gap-2">
-                {it.tags.map((t) => (
+                {it.tags.map((tag) => (
                   <li
-                    key={t}
+                    key={tag}
                     className="rounded-full border border-[var(--border)] bg-[var(--bg-darker)] px-3 py-1 text-xs font-medium text-[var(--text-secondary)]"
                   >
-                    {t}
+                    {tag}
                   </li>
                 ))}
               </ul>

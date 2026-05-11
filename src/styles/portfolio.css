@@ -1,104 +1,159 @@
 :root {
-  --primary: #4f46e5; /* indigo-600 */
-  --secondary: #2563eb; /* blue-600 */
-  --accent: #06b6d4; /* cyan-500 */
-  --success: #22c55e; /* green-500 */
-  --warning: #f59e0b; /* amber-500 */
-  --danger: #ef4444; /* red-500 */
-  --info: #38bdf8; /* sky-400 */
+  /* Paleta oscuro (editor / IDE) — más iluminado que slate puro */
+  --palette-editor: #000c18;
+  --palette-sidebar: #051221;
+  --palette-keyword: #6688cc;
+  --palette-type: #22aa44;
+  --palette-function: #44aa88;
+  --palette-string: #225588;
+  --palette-comment: #ff8800;
+  --palette-number: #ff8800;
 
-  --indigo: #4f46e5;
-  --blue: #2563eb;
-  --cyan: #06b6d4;
-  --teal: #14b8a6;
-  --green: #22c55e;
-  --lime: #84cc16;
-  --amber: #f59e0b;
-  --orange: #f97316;
-  --red: #ef4444;
+  --primary: var(--palette-keyword);
+  --secondary: var(--palette-string);
+  --accent: var(--palette-type);
+  --success: var(--palette-type);
+  --warning: var(--palette-comment);
+  --danger: #e85d5d;
+  --info: var(--palette-keyword);
+
+  --indigo: #6688cc;
+  --blue: var(--palette-string);
+  --cyan: var(--palette-function);
+  --teal: var(--palette-function);
+  --green: var(--palette-type);
+  --lime: #6fdc8a;
+  --amber: var(--palette-comment);
+  --orange: var(--palette-comment);
+  --red: #f87171;
   --pink: #ec4899;
-  --violet: #8b5cf6;
+  --violet: #a78bfa;
 
-  --bg-dark: #0f172a;
-  --bg-darker: #0b1220;
-  --bg-card: #111c2e;
-  --bg-hover: #172a45;
-  --border: #6395f8; /* borde para tema oscuro */
-  --border-subtle: rgba(148, 163, 184, 0.18);
+  --bg-dark: var(--palette-sidebar);
+  --bg-darker: var(--palette-editor);
+  --bg-card: #0c1a2e;
+  --bg-hover: #132a42;
+  --border: color-mix(in oklab, var(--palette-keyword) 85%, white);
+  --border-subtle: rgba(102, 136, 204, 0.22);
 
-  --text-primary: #f1f5f9;
-  --text-secondary: #cbd5e1;
-  --text-muted: #94a3b8;
-  --text-inverse: #0b1220;
+  --text-primary: #e8ecf4;
+  --text-secondary: #c8d7ea;
+  --text-muted: #94abc4;
+  --text-inverse: #051221;
 
-  --shadow-color: rgba(2, 6, 23, 0.55);
+  --shadow-color: rgba(0, 12, 24, 0.55);
 
   /* Background FX */
-  --grid-opacity: 0.07;
-  --particle-color: var(--primary);
-  --particle-opacity: 0.22;
+  --grid-opacity: 0.09;
+  --particle-color: var(--palette-keyword);
+  --particle-opacity: 0.26;
   --particle-size: 2.05rem;
 
   /* Circuit FX canvas (embed + legacy about) */
-  --circuit-fade: rgba(15, 23, 42, 0.22);
-  --circuit-neon: #00ffcc;
-  --circuit-bus: rgba(0, 255, 204, 0.16);
-  --circuit-chip-fill: rgba(11, 18, 32, 0.55);
-  --circuit-chip-stroke: rgba(0, 255, 204, 0.9);
-  --circuit-chip-text: rgba(0, 255, 204, 0.95);
-  --circuit-embed-opacity: 0.42;
+  --circuit-fade: rgba(5, 18, 33, 0.28);
+  --circuit-neon: var(--palette-function);
+  --circuit-bus: rgba(102, 136, 204, 0.28);
+  --circuit-chip-fill: rgba(12, 26, 46, 0.62);
+  --circuit-chip-stroke: color-mix(in oklab, var(--palette-keyword) 90%, white);
+  --circuit-chip-text: #dff6ea;
+  --circuit-embed-opacity: 0.48;
 
-  --skill-bar-intermediate: #10b981;
-  --skill-bar-basic: #f59e0b;
-  --skill-bar-learning: #a855f7;
+  --skill-bar-intermediate: var(--palette-type);
+  --skill-bar-basic: var(--palette-comment);
+  --skill-bar-learning: var(--palette-keyword);
 
   --gradient-1: linear-gradient(
     135deg,
-    #4f46e5 0%,
-    #2563eb 55%,
-    #06b6d4 100%
+    var(--palette-keyword) 0%,
+    var(--palette-string) 50%,
+    var(--palette-function) 100%
   );
   --gradient-2: linear-gradient(
     135deg,
-    #0ea5e9 0%,
-    #4f46e5 55%,
-    #06b6d4 100%
+    var(--palette-function) 0%,
+    var(--palette-keyword) 55%,
+    var(--palette-type) 100%
   );
-  --gradient-3: linear-gradient(135deg, #22c55e 0%, #06b6d4 100%);
-  --gradient-warm: linear-gradient(135deg, #f97316 0%, #f59e0b 55%, #84cc16 100%);
-  --gradient-danger: linear-gradient(135deg, #ef4444 0%, #ec4899 55%, #8b5cf6 100%);
+  --gradient-3: linear-gradient(
+    135deg,
+    var(--palette-type) 0%,
+    var(--palette-function) 100%
+  );
+  --gradient-warm: linear-gradient(
+    135deg,
+    var(--palette-comment) 0%,
+    var(--palette-number) 55%,
+    var(--palette-type) 100%
+  );
+  --gradient-danger: linear-gradient(
+    135deg,
+    #f87171 0%,
+    var(--palette-string) 55%,
+    var(--palette-keyword) 100%
+  );
 }
 
 [data-theme="light"] {
-  --bg-dark: #ffffff;
-  --bg-darker: #f5f7ff;
-  --bg-card: #ffffff;
-  --bg-hover: #eef2ff;
-  --border: #052970; /* borde para tema claro */
-  --border-subtle: rgba(15, 23, 42, 0.12);
-  --text-primary: #0f172a;
-  --text-secondary: #334155;
-  --text-muted: #64748b;
+  /* Paleta claro (editor / IDE) — menos blanco puro, más color */
+  --palette-editor: #ffffff;
+  --palette-sidebar: #f5f5f5;
+  --palette-keyword: #0000ff;
+  --palette-type: #2b91af;
+  --palette-function: #74531f;
+  --palette-string: #a31515;
+  --palette-comment: #098658;
+  --palette-number: #008000;
+
+  --primary: #1d4ed8;
+  --secondary: var(--palette-type);
+  --accent: var(--palette-type);
+  --success: var(--palette-number);
+  --warning: #b45309;
+  --danger: var(--palette-string);
+  --info: color-mix(in oklab, var(--palette-keyword) 75%, #1e3a5f);
+
+  --indigo: #1d4ed8;
+  --blue: var(--palette-type);
+  --cyan: var(--palette-comment);
+  --teal: var(--palette-comment);
+  --green: var(--palette-number);
+  --lime: #65a30d;
+  --amber: #b45309;
+  --orange: #c2410c;
+  --red: var(--palette-string);
+  --pink: #be185d;
+  --violet: #6d28d9;
+
+  --bg-dark: var(--palette-sidebar);
+  --bg-darker: #eceff1;
+  --bg-card: var(--palette-editor);
+  --bg-hover: #e8eef6;
+  --border: color-mix(in oklab, var(--palette-type) 55%, #052970);
+  --border-subtle: rgba(43, 145, 175, 0.18);
+
+  --text-primary: #0c1220;
+  --text-secondary: #1e3a4a;
+  --text-muted: #4a6678;
   --text-inverse: #f8fafc;
-  --shadow-color: rgba(15, 23, 42, 0.14);
+  --shadow-color: rgba(15, 23, 42, 0.08);
 
   /* Background FX (ensure visibility on light theme) */
-  --grid-opacity: 0.10;
-  --particle-color: var(--border); /* #052970 */
-  --particle-opacity: 0.16;
+  --grid-opacity: 0.085;
+  --particle-color: var(--palette-type);
+  --particle-opacity: 0.14;
   --particle-size: 2.05rem;
 
-  --circuit-fade: rgba(245, 247, 255, 0.35);
-  --circuit-neon: #052970;
-  --circuit-bus: rgba(5, 41, 112, 0.18);
-  --circuit-chip-fill: rgba(255, 255, 255, 0.65);
-  --circuit-chip-stroke: rgba(5, 41, 112, 0.85);
-  --circuit-chip-text: rgba(5, 41, 112, 0.95);
-  --circuit-embed-opacity: 0.38;
+  --circuit-fade: rgba(245, 245, 245, 0.45);
+  --circuit-neon: var(--palette-type);
+  --circuit-bus: rgba(43, 145, 175, 0.22);
+  --circuit-chip-fill: rgba(255, 255, 255, 0.78);
+  --circuit-chip-stroke: color-mix(in oklab, var(--palette-type) 70%, #052970);
+  --circuit-chip-text: #0c2a33;
+  --circuit-embed-opacity: 0.42;
 
-  --skill-bar-intermediate: #059669;
-  --skill-bar-basic: #d97706;
-  --skill-bar-learning: #9333ea;
+  --skill-bar-intermediate: var(--palette-comment);
+  --skill-bar-basic: #ca8a04;
+  --skill-bar-learning: #6d28d9;
 }
 
 [dir="rtl"] {
@@ -142,6 +197,52 @@
 .circuit-fx-canvas {
   opacity: var(--circuit-embed-opacity);
   mix-blend-mode: normal;
+}
+
+.glass {
+  background: color-mix(in oklab, var(--bg-dark) 70%, transparent);
+  border: 1px solid color-mix(in oklab, var(--border) 55%, transparent);
+  box-shadow: 0 8px 30px rgba(2, 6, 23, 0.18);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+}
+
+.glass-soft {
+  background: color-mix(in oklab, var(--bg-card) 62%, transparent);
+  border: 1px solid color-mix(in oklab, var(--border) 45%, transparent);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+/* Utilidades de paleta (texto / acentos) — usar en títulos secundarios, badges, mono */
+.text-palette-keyword {
+  color: var(--palette-keyword);
+}
+.text-palette-type {
+  color: var(--palette-type);
+}
+.text-palette-function {
+  color: var(--palette-function);
+}
+.text-palette-string {
+  color: var(--palette-string);
+}
+.text-palette-comment {
+  color: var(--palette-comment);
+}
+.text-palette-number {
+  color: var(--palette-number);
+}
+
+/* Superficies alternas (menos fatiga en claro; capas en oscuro) */
+.bg-surface-sidebar {
+  background-color: var(--palette-sidebar);
+}
+.bg-surface-editor {
+  background-color: var(--palette-editor);
+}
+.ring-palette-soft {
+  box-shadow: 0 0 0 1px color-mix(in oklab, var(--palette-type) 25%, transparent);
 }
 
 /* Particle placements (no inline styles) */

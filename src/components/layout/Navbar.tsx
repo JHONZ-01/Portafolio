@@ -14,6 +14,7 @@ const navItems = [
   { href: "/", labelKey: "nav.home" as const },
   { href: "/about", labelKey: "nav.about" as const },
   { href: "/projects", labelKey: "nav.projects" as const },
+  { href: "/cv", labelKey: "nav.cv" as const },
 ] as const;
 
 export function Navbar() {
@@ -23,8 +24,9 @@ export function Navbar() {
   const { t } = useT();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[var(--border)] bg-[color:var(--bg-dark)]/80 backdrop-blur">
-      <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-6 py-4">
+    <>
+      <header className="glass fixed inset-x-0 top-0 z-50">
+        <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-6 py-5">
         <Link
           href="/"
           className="font-semibold tracking-tight text-[var(--text-primary)]"
@@ -44,9 +46,9 @@ export function Navbar() {
                   key={item.href}
                   href={item.href}
                   className={cn(
-                    "rounded-xl px-3 py-2 text-sm font-medium transition-colors",
-                    "text-[var(--text-secondary)] hover:bg-[var(--bg-hover)] hover:text-[var(--text-primary)]",
-                    { "text-[var(--text-primary)]": isActive },
+                    "glass-soft rounded-xl px-3 py-2 text-sm font-medium transition-colors",
+                    "text-[var(--text-secondary)] hover:text-[var(--text-primary)]",
+                    { "text-[var(--text-primary)] ring-1 ring-[var(--border)]": isActive },
                   )}
                   aria-current={isActive ? "page" : undefined}
                 >
@@ -59,7 +61,7 @@ export function Navbar() {
           <button
             type="button"
             onClick={toggleLang}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-[var(--border)] bg-[var(--bg-card)] text-[var(--text-secondary)] transition-colors hover:bg-[var(--bg-hover)] hover:text-[var(--text-primary)]"
+            className="glass-soft inline-flex h-11 w-11 items-center justify-center rounded-xl text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]"
             aria-label={t("actions.toggleLang")}
             title={t("actions.toggleLang")}
           >
@@ -74,7 +76,7 @@ export function Navbar() {
           <button
             type="button"
             onClick={toggleTheme}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-[var(--border)] bg-[var(--bg-card)] text-[var(--text-secondary)] transition-colors hover:bg-[var(--bg-hover)] hover:text-[var(--text-primary)]"
+            className="glass-soft inline-flex h-11 w-11 items-center justify-center rounded-xl text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]"
             aria-label={t("actions.toggleTheme")}
             title={t("actions.toggleTheme")}
           >
@@ -88,7 +90,7 @@ export function Navbar() {
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-[var(--border)] bg-[var(--bg-card)] text-[var(--text-secondary)] transition-colors hover:bg-[var(--bg-hover)] hover:text-[var(--text-primary)] md:hidden"
+            className="glass-soft inline-flex h-11 w-11 items-center justify-center rounded-xl text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)] md:hidden"
             aria-label="Abrir menú"
             aria-controls="mobile-menu"
           >
@@ -102,7 +104,7 @@ export function Navbar() {
         className={cn(
           "md:hidden",
           open
-            ? "border-t border-[var(--border)] bg-[color:var(--bg-dark)]/95 backdrop-blur"
+            ? "glass border-t border-[var(--border)]"
             : "hidden",
         )}
       >
@@ -116,9 +118,9 @@ export function Navbar() {
                   href={item.href}
                   onClick={() => setOpen(false)}
                   className={cn(
-                    "rounded-xl px-3 py-3 text-sm font-medium transition-colors",
-                    "text-[var(--text-secondary)] hover:bg-[var(--bg-hover)] hover:text-[var(--text-primary)]",
-                    { "text-[var(--text-primary)]": isActive },
+                    "glass-soft rounded-xl px-3 py-3 text-sm font-medium transition-colors",
+                    "text-[var(--text-secondary)] hover:text-[var(--text-primary)]",
+                    { "text-[var(--text-primary)] ring-1 ring-[var(--border)]": isActive },
                   )}
                   aria-current={isActive ? "page" : undefined}
                 >
@@ -133,6 +135,8 @@ export function Navbar() {
           </div>
         </nav>
       </div>
-    </header>
+      </header>
+      <div className="h-[92px]" aria-hidden="true" />
+    </>
   );
 }
