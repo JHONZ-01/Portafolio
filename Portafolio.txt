@@ -1,0 +1,165 @@
+========================================================
+  JHON PAUCAR
+  Tecnólogo en Desarrollo de Software
+  Programador Junior
+  PORTAFOLIO PROFESIONAL 2025
+========================================================
+
+
+PERFIL PROFESIONAL
+------------------
+Soy Jhon Paucar, tecnólogo en Desarrollo de Software en proceso de
+graduación, con experiencia práctica real en el sector empresarial.
+Me desempeño actualmente como Programador y Técnico de Servicio en
+una empresa dedicada al otorgamiento de créditos para la adquisición
+de celulares. Mi trabajo abarca tanto el desarrollo de soluciones
+tecnológicas internas como la instalación, configuración y
+mantenimiento de aplicaciones móviles, plataformas de gestión de
+créditos y portales web propios de la compañía.
+
+Cuento con conocimientos sólidos en desarrollo web, desarrollo de
+aplicaciones móviles Android y soluciones con tecnologías Microsoft
+como C# y .NET, y me encuentro en proceso de fortalecimiento de mis
+capacidades en tecnologías modernas como PHP con Laravel y React con
+Tailwind CSS.
+
+
+INFORMACIÓN PERSONAL
+--------------------
+Nombre completo:      Jhon Paucar
+Formación académica:  Tecnólogo en Desarrollo de Software (en proceso de titulación)
+Rol actual:           Programador Junior & Técnico de Servicio
+Sector de la empresa: Créditos para adquisición de celulares
+Responsabilidades:    Desarrollo de software, instalación de apps de
+                      candado, gestión de plataformas de crédito y páginas web
+
+
+HABILIDADES TÉCNICAS
+--------------------
+
+Desarrollo Frontend:
+  - HTML5          (Intermedio)
+  - CSS3           (Intermedio)
+  - JavaScript     (Básico-Intermedio)
+  - React.js       (En aprendizaje)
+  - Tailwind CSS   (En aprendizaje)
+  - Bootstrap      (Básico)
+
+Desarrollo Backend:
+  - C# / .NET      (Intermedio)
+  - PHP            (Básico)
+  - Laravel        (En aprendizaje)
+  - SQL            (Básico-Intermedio)
+
+Desarrollo Móvil & Otros:
+  - Android        (Básico-Intermedio)
+  - Apps de candado (Operativo)
+  - Git / GitHub   (Básico)
+  - Plataformas Web (Operativo)
+
+
+EXPERIENCIA LABORAL
+-------------------
+Cargo:   Programador Junior & Técnico de Servicio
+Empresa: Empresa de Créditos para Celulares
+Estado:  En curso
+
+Funciones y responsabilidades desempeñadas:
+
+- Configuración e instalación de aplicaciones de candado (MDM) en
+  dispositivos móviles adquiridos a crédito, garantizando el control
+  de acceso hasta la cancelación total del crédito.
+
+- Gestión y mantenimiento de plataformas digitales de crédito
+  utilizadas para el registro, seguimiento y control de clientes
+  y sus pagos.
+
+- Soporte técnico a dispositivos móviles Android: diagnóstico de
+  fallas de hardware y software, formateo, restauración del sistema
+  y configuración inicial.
+
+- Administración y actualización de páginas web corporativas de
+  la empresa.
+
+- Apoyo en el desarrollo de herramientas internas para optimizar
+  procesos operativos del negocio.
+
+- Atención y soporte técnico a clientes y al equipo interno ante
+  incidencias tecnológicas.
+
+
+CÓMO PUEDO APORTAR A LA EMPRESA
+---------------------------------
+
+1. Automatización de procesos
+   Puedo desarrollar herramientas internas con C#/.NET, PHP/Laravel
+   o JavaScript que automaticen tareas repetitivas como la generación
+   de reportes de crédito, el envío de notificaciones de pago o el
+   control de inventario de dispositivos.
+
+2. Mejora de la plataforma web
+   Con conocimientos en HTML, CSS, JavaScript y en proceso de
+   aprendizaje de React y Laravel, puedo apoyar en la mejora de la
+   interfaz y funcionalidad de las páginas web de la empresa,
+   haciéndolas más modernas, rápidas y fáciles de usar.
+
+3. Gestión de apps móviles y dispositivos
+   Cuento con experiencia directa en la instalación y configuración
+   de aplicaciones de candado y plataformas de crédito. Puedo
+   documentar y estandarizar estos procesos para que el equipo los
+   ejecute de forma más eficiente y con menor margen de error.
+
+4. Desarrollo de aplicaciones Android
+   Con mi base en desarrollo Android, puedo contribuir al diseño de
+   aplicaciones móviles propias que mejoren la experiencia del cliente
+   o del equipo interno, como apps de consulta de saldo, historial de
+   pagos o reportes en tiempo real.
+
+5. Soporte y mantenimiento técnico integral
+   Mi capacidad de actuar tanto como desarrollador como técnico de
+   servicio me permite ofrecer soluciones completas: desde el código
+   hasta el dispositivo físico, lo que reduce tiempos de respuesta
+   y dependencia de terceros.
+
+
+FORMACIÓN ACADÉMICA
+--------------------
+Título:      Tecnólogo en Desarrollo de Software
+Institución: Institución de Educación Superior
+Estado:      En proceso de titulación – 2025
+
+Materias y competencias clave:
+  - Programación orientada a objetos (C#, Java)
+  - Desarrollo web (HTML, CSS, JavaScript, PHP)
+  - Base de datos relacionales y SQL
+  - Desarrollo de aplicaciones móviles Android
+  - Ingeniería de software y ciclo de vida del desarrollo
+
+
+APRENDIZAJE CONTINUO
+--------------------
+Tecnologías y frameworks en proceso de estudio autónomo actualmente:
+
+  - React.js      — Biblioteca para interfaces de usuario modernas y reactivas.
+  - Tailwind CSS  — Framework utilitario de CSS para diseño ágil y responsivo.
+  - Laravel (PHP) — Framework backend robusto para desarrollo de aplicaciones web empresariales.
+  - APIs RESTful  — Integración y consumo de servicios web.
+
+
+HABILIDADES BLANDAS
+--------------------
+  - Resolución de problemas técnicos
+  - Trabajo bajo presión
+  - Comunicación con clientes y equipo
+  - Aprendizaje autónomo y rápido
+  - Adaptabilidad a nuevas tecnologías
+  - Proactividad e iniciativa
+
+
+========================================================
+  "Soy un profesional en formación continua, con experiencia real
+   y hambre de seguir creciendo. Estoy listo para aportar valor
+   desde el primer día."
+========================================================
+
+Jhon Paucar  |  Portafolio Profesional  |  2025

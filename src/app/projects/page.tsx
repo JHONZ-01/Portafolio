@@ -1,7 +1,14 @@
+import { PageHeader } from "@/components/pages/PageHeader";
+import { ProjectsShowcase } from "@/components/sections/ProjectsShowcase";
+
 export default function ProjectsPage() {
   return (
-    <main>
-      <h1>My Projects</h1>
-    </main>
+    <div className="py-12">
+      <PageHeader
+        titleKey="pages.projects.title"
+        subtitleKey="pages.projects.subtitle"
+      />
+      <ProjectsShowcase />
+    </div>
   );
 }
