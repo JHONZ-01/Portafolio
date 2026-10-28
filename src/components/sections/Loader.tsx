@@ -25,7 +25,7 @@ export function Loader({ show }: { show: boolean }) {
 
         <div className="mt-6">
           <motion.div
-            className="mx-auto h-12 w-12 rounded-full border-2 border-[var(--border)] border-t-[var(--primary)] border-r-[var(--cyan)]"
+            className="mx-auto h-12 w-12 rounded-full border-2 border-[var(--border)] border-t-[var(--primary)]"
             animate={{ rotate: 360 }}
             transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
           />
@@ -33,7 +33,7 @@ export function Loader({ show }: { show: boolean }) {
 
         <div className="mt-6 h-1 overflow-hidden rounded bg-[var(--border)]">
           <motion.div
-            className="h-full bg-[var(--gradient-1)]"
+            className="h-full bg-[var(--gradient-primary)]"
             initial={{ width: 0 }}
             animate={{ width: "100%" }}
             transition={{ duration: 1.6, ease: "easeInOut" }}

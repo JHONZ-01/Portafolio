@@ -17,9 +17,6 @@ export type MessageKey =
   | "sections.about.title"
   | "sections.about.subtitle"
   | "sections.about.body"
-  | "sections.about.stats.projects"
-  | "sections.about.stats.years"
-  | "sections.about.stats.clients"
   | "sections.skills.title"
   | "sections.skills.subtitle"
   | "sections.skills.level.intermediate"
@@ -157,10 +154,6 @@ export const messages: Record<Lang, Messages> = {
       "Perfil profesional, formación y enfoque de crecimiento continuo.",
     "sections.about.body":
       "Soy Jhon Paucar, tecnólogo en Desarrollo de Software (en proceso de titulación) y Programador Junior & Técnico de Servicio en una empresa de créditos para adquisición de celulares. Mi trabajo combina desarrollo de herramientas internas y operación/soporte: instalación y configuración de apps de candado (MDM), gestión de plataformas de crédito, soporte Android y actualización de sitios corporativos. Tengo base sólida en desarrollo web y tecnologías Microsoft (C#/.NET) y estoy fortaleciendo habilidades en React + Tailwind y PHP + Laravel, además de integración de APIs REST.",
-    "sections.about.stats.projects": "Proyectos",
-    "sections.about.stats.years": "Años",
-    "sections.about.stats.clients": "Clientes",
-
     "sections.skills.title": "Habilidades",
     "sections.skills.subtitle":
       "Stack actual, tecnologías en aprendizaje y herramientas operativas del día a día.",
@@ -337,10 +330,6 @@ export const messages: Record<Lang, Messages> = {
       "Professional profile, education, and continuous learning.",
     "sections.about.body":
       "I’m Jhon Paucar, a Software Development Technologist (degree in progress) and a Junior Programmer & Service Technician at a company that provides phone credit programs. My role blends internal development with hands-on operations: MDM lock app setup, credit platform management, Android device support, and corporate website updates. I have a solid base in web development and Microsoft technologies (C#/.NET) and I’m strengthening skills in React + Tailwind and PHP + Laravel, plus REST API integration.",
-    "sections.about.stats.projects": "Projects",
-    "sections.about.stats.years": "Years",
-    "sections.about.stats.clients": "Clients",
-
     "sections.skills.title": "Skills",
     "sections.skills.subtitle":
       "Current stack, in-progress learning, and day-to-day tooling.",

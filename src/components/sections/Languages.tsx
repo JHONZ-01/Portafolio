@@ -1,19 +1,17 @@
 "use client";
 
-import Image from "next/image";
-
 import { Card } from "@/components/ui/Card";
 import { useT } from "@/lib/i18n/useT";
 
 type LanguageItem = {
   code: "es" | "en";
   name: string;
-  flagSrc: string;
+  flagEmoji: string;
 };
 
 const languages: LanguageItem[] = [
-  { code: "es", name: "Español", flagSrc: "/images/es.png" },
-  { code: "en", name: "English", flagSrc: "/images/en.png" },
+  { code: "es", name: "Español", flagEmoji: "🇪🇸" },
+  { code: "en", name: "English", flagEmoji: "🇬🇧" },
 ];
 
 export function Languages() {
@@ -48,14 +46,12 @@ export function Languages() {
             </div>
 
             <div className="flex items-center gap-3">
-              <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full border border-[var(--border)] bg-[var(--bg-darker)]">
-                <Image
-                  src={lang.flagSrc}
-                  alt={`Bandera ${lang.name}`}
-                  width={48}
-                  height={48}
-                  className="h-12 w-12 object-cover"
-                />
+              <div
+                className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full border border-[var(--border)] bg-[var(--bg-darker)] text-2xl"
+                role="img"
+                aria-label={`Bandera ${lang.name}`}
+              >
+                {lang.flagEmoji}
               </div>
             </div>
           </Card>

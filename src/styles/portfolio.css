@@ -91,6 +91,11 @@
     var(--palette-string) 55%,
     var(--palette-keyword) 100%
   );
+  --gradient-primary: linear-gradient(
+    135deg,
+    var(--primary) 0%,
+    color-mix(in oklab, var(--primary) 55%, white) 100%
+  );
 }
 
 [data-theme="light"] {

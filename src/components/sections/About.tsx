@@ -25,8 +25,8 @@ export function About() {
         </div>
       </div>
 
-      <div className="mt-6 grid gap-4 lg:grid-cols-2 lg:items-start">
-        <Card className="relative overflow-hidden border-transparent">
+      <div className="mt-6">
+        <Card className="relative mx-auto max-w-3xl overflow-hidden border-transparent">
           <CircuitFxCanvas
             mode="border"
             borderVariant="perimeter"
@@ -39,32 +39,6 @@ export function About() {
             {t("sections.about.body")}
           </p>
         </Card>
-        <div className="grid gap-4 sm:grid-cols-3">
-          <Card className="text-center">
-            <div className="font-mono text-3xl font-semibold text-[var(--text-primary)]">
-              50+
-            </div>
-            <div className="mt-1 text-sm text-[var(--text-secondary)]">
-              {t("sections.about.stats.projects")}
-            </div>
-          </Card>
-          <Card className="text-center">
-            <div className="font-mono text-3xl font-semibold text-[var(--text-primary)]">
-              5+
-            </div>
-            <div className="mt-1 text-sm text-[var(--text-secondary)]">
-              {t("sections.about.stats.years")}
-            </div>
-          </Card>
-          <Card className="text-center">
-            <div className="font-mono text-3xl font-semibold text-[var(--text-primary)]">
-              30+
-            </div>
-            <div className="mt-1 text-sm text-[var(--text-secondary)]">
-              {t("sections.about.stats.clients")}
-            </div>
-          </Card>
-        </div>
       </div>
     </section>
   );

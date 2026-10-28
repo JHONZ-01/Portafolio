@@ -66,7 +66,7 @@ export function Experience() {
                   {it.period}
                 </div>
                 {it.current ? (
-                  <span className="rounded-full bg-[var(--gradient-1)] px-3 py-1 text-xs font-semibold text-white">
+                  <span className="rounded-full bg-[var(--gradient-primary)] px-3 py-1 text-xs font-semibold text-white">
                     {t("sections.experience.current")}
                   </span>
                 ) : null}
