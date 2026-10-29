@@ -20,62 +20,87 @@ const PreferencesContext = React.createContext<PreferencesContextValue | null>(
   null,
 );
 
-const STORAGE_THEME = "portfolio-theme";
-const STORAGE_LANG = "portfolio-lang";
+export const STORAGE_THEME = "portfolio-theme";
+export const STORAGE_LANG = "portfolio-lang";
+const CHANGE_EVENT = "portfolio-prefs";
 
-function getDir(): Dir {
-  return "ltr";
+// Respaldo en memoria por si el navegador bloquea localStorage.
+const memory = new Map<string, string>();
+
+function readStorage(key: string): string | null {
+  if (memory.has(key)) return memory.get(key)!;
+  try {
+    return window.localStorage.getItem(key);
+  } catch {
+    return null;
+  }
 }
+
+function writeStorage(key: string, value: string) {
+  memory.set(key, value);
+  try {
+    window.localStorage.setItem(key, value);
+  } catch {
+    // Almacenamiento bloqueado: la preferencia solo dura esta visita.
+  }
+  window.dispatchEvent(new Event(CHANGE_EVENT));
+}
+
+function subscribe(onChange: () => void) {
+  window.addEventListener("storage", onChange);
+  window.addEventListener(CHANGE_EVENT, onChange);
+  return () => {
+    window.removeEventListener("storage", onChange);
+    window.removeEventListener(CHANGE_EVENT, onChange);
+  };
+}
+
+// En el servidor (y al hidratar) siempre claro + español.
+const serverSnapshot = () => null;
 
 export function AppPreferencesProvider({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const [theme, setThemeState] = React.useState<Theme>(() => {
-    if (typeof window === "undefined") return "dark";
-    const savedTheme = window.localStorage.getItem(STORAGE_THEME) as Theme | null;
-    return savedTheme === "dark" || savedTheme === "light" ? savedTheme : "dark";
-  });
+  const storedTheme = React.useSyncExternalStore(
+    subscribe,
+    () => readStorage(STORAGE_THEME),
+    serverSnapshot,
+  );
+  const storedLang = React.useSyncExternalStore(
+    subscribe,
+    () => readStorage(STORAGE_LANG),
+    serverSnapshot,
+  );
 
-  const [lang, setLangState] = React.useState<Lang>(() => {
-    if (typeof window === "undefined") return "es";
-    const savedLang = window.localStorage.getItem(STORAGE_LANG) as Lang | null;
-    return savedLang === "es" || savedLang === "en" ? savedLang : "es";
-  });
+  const theme: Theme = storedTheme === "dark" ? "dark" : "light";
+  const lang: Lang = storedLang === "en" ? "en" : "es";
 
   React.useEffect(() => {
     document.body.setAttribute("data-theme", theme);
-    window.localStorage.setItem(STORAGE_THEME, theme);
   }, [theme]);
 
   React.useEffect(() => {
-    const dir = getDir();
     document.documentElement.lang = lang;
-    document.documentElement.dir = dir;
     document.body.setAttribute("data-lang", lang);
-    document.body.setAttribute("data-dir", dir);
-    window.localStorage.setItem(STORAGE_LANG, lang);
   }, [lang]);
 
-  const dir = getDir();
-
-  const setTheme = React.useCallback((t: Theme) => setThemeState(t), []);
+  const setTheme = React.useCallback((t: Theme) => writeStorage(STORAGE_THEME, t), []);
   const toggleTheme = React.useCallback(
-    () => setThemeState((t) => (t === "dark" ? "light" : "dark")),
-    [],
+    () => setTheme(theme === "dark" ? "light" : "dark"),
+    [theme, setTheme],
   );
 
-  const setLang = React.useCallback((l: Lang) => setLangState(l), []);
-  const toggleLang = React.useCallback(() => {
-    setLangState((l) => {
-      return l === "es" ? "en" : "es";
-    });
-  }, []);
+  const setLang = React.useCallback((l: Lang) => writeStorage(STORAGE_LANG, l), []);
+  const toggleLang = React.useCallback(
+    () => setLang(lang === "es" ? "en" : "es"),
+    [lang, setLang],
+  );
 
   const value = React.useMemo<PreferencesContextValue>(
-    () => ({ theme, setTheme, toggleTheme, lang, setLang, toggleLang, dir }),
-    [theme, setTheme, toggleTheme, lang, setLang, toggleLang, dir],
+    () => ({ theme, setTheme, toggleTheme, lang, setLang, toggleLang, dir: "ltr" }),
+    [theme, setTheme, toggleTheme, lang, setLang, toggleLang],
   );
 
   return (

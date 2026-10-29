@@ -13,11 +13,13 @@ export function PageHeader({
   const { t } = useT();
 
   return (
-    <>
-      <h1 className="text-3xl font-semibold tracking-tight text-[var(--text-primary)]">
-        {t(titleKey)}
+    <div className="page-head">
+      <h1 className="page-head__title hero__title">
+        <span className="line">
+          <span>{t(titleKey)}</span>
+        </span>
       </h1>
-      <p className="mt-2 text-[var(--text-secondary)]">{t(subtitleKey)}</p>
-    </>
+      <p className="page-head__lead">{t(subtitleKey)}</p>
+    </div>
   );
 }

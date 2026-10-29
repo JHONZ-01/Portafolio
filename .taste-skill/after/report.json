@@ -1,0 +1,2101 @@
+{
+ "url": "http://localhost:3100",
+ "at": "2026-10-28T04:49:33.622Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 9,
+   "filled": [
+    0.28,
+    0.19,
+    0.64,
+    0.48,
+    0.65,
+    0.22,
+    0.76,
+    1,
+    1
+   ],
+   "motion": {
+    "elements": 7,
+    "css": 7,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 7341,
+     "screens": 8.2,
+     "words": 521,
+     "img": 5,
+     "video": 0,
+     "canvas": 0,
+     "svg": 1,
+     "sections": 6,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 2,
+     "uiAbuse": false,
+     "realPictures": 3,
+     "videoCount": 0,
+     "uiPictures": 1,
+     "pictureSamples": [
+      "image?url=%2Fimages%2Fworld%2Frepair-lab-4811581",
+      "image?url=%2Fimages%2Fworld%2Fplaca-movil.jpg&w=",
+      "image?url=%2Fimages%2Fworld%2Frepair-lab-4811581"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Del código al dispositivo.",
+     "words": 4,
+     "chars": 26,
+     "lines": 2,
+     "size": 164.2,
+     "vw": 11.4,
+     "font": "Geist",
+     "weight": 500,
+     "tracking": -0.055,
+     "leading": 0.9,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.93,
+     "top": 233,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Del código al dispositivo.",
+     "words": 4,
+     "lines": 2,
+     "size": 164.2,
+     "font": "Geist"
+    },
+    "headings": [
+     {
+      "text": "Del código al dispositivo.",
+      "words": 4,
+      "chars": 26,
+      "lines": 2,
+      "size": 164.2,
+      "vw": 11.4,
+      "font": "Geist",
+      "weight": 500,
+      "tracking": -0.055,
+      "leading": 0.9,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.93,
+      "top": 233,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Sobre mí",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 63.4,
+      "vw": 4.4,
+      "font": "Geist",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.93,
+      "top": 1091,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "9:41",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 58,
+      "vw": 4,
+      "font": "Geist",
+      "weight": 300,
+      "tracking": -0.04,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "right",
+      "widthRatio": 0.16,
+      "top": 2310,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Del panel al teléfono",
+      "words": 4,
+      "chars": 21,
+      "lines": 2,
+      "size": 63.4,
+      "vw": 4.4,
+      "font": "Geist",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.36,
+      "top": 2315,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Trabajo:",
+      "words": 1,
+      "chars": 8,
+      "lines": 1,
+      "size": 63.4,
+      "vw": 4.4,
+      "font": "Geist",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.15,
+      "top": 3143,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Plataforma de créditos,",
+      "words": 3,
+      "chars": 23,
+      "lines": 1,
+      "size": 63.4,
+      "vw": 4.4,
+      "font": "Geist",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.45,
+      "top": 3143,
+      "tag": "li",
+      "kind": "statement"
+     },
+     {
+      "text": "Candado MDM ,",
+      "words": 3,
+      "chars": 13,
+      "lines": 2,
+      "size": 63.4,
+      "vw": 4.4,
+      "font": "Geist",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 3143,
+      "tag": "li",
+      "kind": "statement"
+     },
+     {
+      "text": "Soporte Android ,",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 63.4,
+      "vw": 4.4,
+      "font": "Geist",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.4,
+      "top": 3214,
+      "tag": "li",
+      "kind": "statement"
+     },
+     {
+      "text": "Sitio web corporativo,",
+      "words": 3,
+      "chars": 22,
+      "lines": 1,
+      "size": 63.4,
+      "vw": 4.4,
+      "font": "Geist",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.41,
+      "top": 3214,
+      "tag": "li",
+      "kind": "statement"
+     },
+     {
+      "text": "Herramientas internas,",
+      "words": 2,
+      "chars": 22,
+      "lines": 1,
+      "size": 63.4,
+      "vw": 4.4,
+      "font": "Geist",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.44,
+      "top": 3285,
+      "tag": "li",
+      "kind": "statement"
+     },
+     {
+      "text": "Este portafolio.",
+      "words": 2,
+      "chars": 16,
+      "lines": 1,
+      "size": 63.4,
+      "vw": 4.4,
+      "font": "Geist",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.29,
+      "top": 3285,
+      "tag": "li",
+      "kind": "statement"
+     },
+     {
+      "text": "Con qué trabajo",
+      "words": 3,
+      "chars": 15,
+      "lines": 1,
+      "size": 63.4,
+      "vw": 4.4,
+      "font": "Geist",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.93,
+      "top": 4452,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Hablemos",
+      "words": 1,
+      "chars": 8,
+      "lines": 1,
+      "size": 63.4,
+      "vw": 4.4,
+      "font": "Geist",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.39,
+      "top": 5776,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "tu-email@ejemplo.com",
+      "words": 1,
+      "chars": 20,
+      "lines": 1,
+      "size": 100.8,
+      "vw": 7,
+      "font": "Geist",
+      "weight": 400,
+      "tracking": -0.045,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.93,
+      "top": 6420,
+      "tag": "a",
+      "kind": "heading"
+     },
+     {
+      "text": "Jhon Paucar",
+      "words": 2,
+      "chars": 11,
+      "lines": 1,
+      "size": 251.2,
+      "vw": 17.4,
+      "font": "Geist",
+      "weight": 500,
+      "tracking": -0.06,
+      "leading": 0.82,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.93,
+      "top": 6561,
+      "tag": "p",
+      "kind": "statement"
+     }
+    ],
+    "headingSummary": {
+     "count": 15,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 7,
+     "centered": 1,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Geist",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      14,
+      15,
+      16,
+      18,
+      25,
+      63,
+      101,
+      164,
+      251
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": {
+      "font": "Geist",
+      "size": 18,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 12.4
+     },
+     "measureChars": 40,
+     "max": {
+      "size": 251.2,
+      "vw": 17.4,
+      "font": "Geist",
+      "text": "Jhon Paucar"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.02,
+     "centerShare": 0.01,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ffffff",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#c9f0dc",
+       "top": 2113,
+       "hsl": {
+        "h": 149,
+        "s": 0.57,
+        "l": 0.86
+       }
+      },
+      {
+       "color": "#f2f3f4",
+       "top": 3609,
+       "hsl": {
+        "h": 210,
+        "s": 0.08,
+        "l": 0.95
+       }
+      },
+      {
+       "color": "#171a20",
+       "top": 5661,
+       "hsl": {
+        "h": 220,
+        "s": 0.16,
+        "l": 0.11
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#171a20",
+       "share": 0.52
+      },
+      {
+       "color": "#5c5e62",
+       "share": 0.19
+      },
+      {
+       "color": "#a3a6ab",
+       "share": 0.08
+      },
+      {
+       "color": "#0d2a1f",
+       "share": 0.07
+      },
+      {
+       "color": "#f4f4f4",
+       "share": 0.06
+      }
+     ],
+     "button": {
+      "bg": "#0b7a55",
+      "hsl": {
+       "h": 160,
+       "s": 0.83,
+       "l": 0.26
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 6,
+     "inHero": 2,
+     "radius": 4,
+     "height": 48,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Contactar",
+      "Ver mi trabajo"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 4,
+     "boxRadius": 8,
+     "squareMedia": 3,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 5,
+     "fixed": false,
+     "height": 104,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "geist",
+     "geist fallback"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 7341,
+    "margins": {
+     "left": 48,
+     "right": 48
+    },
+    "sections": [
+     {
+      "sel": "div.page-fade",
+      "tag": "div",
+      "top": 104,
+      "height": 6457,
+      "words": 452,
+      "media": 3,
+      "middle": 0,
+      "heading": {
+       "text": "Del código",
+       "size": 164,
+       "tag": "h1"
+      },
+      "left": 48,
+      "right": 48,
+      "textLeft": 48,
+      "textRight": 48,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.site-footer",
+      "tag": "footer",
+      "top": 6561,
+      "height": 781,
+      "words": 50,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Jhon Paucar",
+       "size": 251,
+       "tag": "p"
+      },
+      "left": 48,
+      "right": 48,
+      "textLeft": 48,
+      "textRight": 48,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [
+     {
+      "top": 1928,
+      "height": 336
+     },
+     {
+      "top": 2788,
+      "height": 352
+     },
+     {
+      "top": 5468,
+      "height": 296
+     },
+     {
+      "top": 6092,
+      "height": 312
+     }
+    ],
+    "h1s": [
+     {
+      "text": "Del código al dispositivo.",
+      "size": 164,
+      "top": 233,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 48,
+      "n": 9
+     },
+     {
+      "x": 605,
+      "n": 2
+     },
+     {
+      "x": 1030,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 12,
+    "bodySize": 25,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.24,
+    "voidBox": {
+     "x": 960,
+     "y": 120,
+     "w": 480,
+     "h": 660
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 7,
+   "filled": [
+    0.21,
+    0.33,
+    0.79,
+    0.7,
+    0.3,
+    0.87,
+    1
+   ],
+   "motion": {
+    "elements": 7,
+    "css": 7,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 6911,
+     "screens": 6.7,
+     "words": 517,
+     "img": 5,
+     "video": 0,
+     "canvas": 0,
+     "svg": 1,
+     "sections": 6,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 2,
+     "uiAbuse": false,
+     "realPictures": 3,
+     "videoCount": 0,
+     "uiPictures": 1,
+     "pictureSamples": [
+      "image?url=%2Fimages%2Fworld%2Frepair-lab-4811581",
+      "image?url=%2Fimages%2Fworld%2Fplaca-movil.jpg&w=",
+      "image?url=%2Fimages%2Fworld%2Frepair-lab-4811581"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Del código al dispositivo.",
+     "words": 4,
+     "chars": 26,
+     "lines": 2,
+     "size": 102.9,
+     "vw": 13.4,
+     "font": "Geist",
+     "weight": 500,
+     "tracking": -0.055,
+     "leading": 0.9,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.93,
+     "top": 610,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Del código al dispositivo.",
+     "words": 4,
+     "lines": 2,
+     "size": 102.9,
+     "font": "Geist"
+    },
+    "headings": [
+     {
+      "text": "Del código al dispositivo.",
+      "words": 4,
+      "chars": 26,
+      "lines": 2,
+      "size": 102.9,
+      "vw": 13.4,
+      "font": "Geist",
+      "weight": 500,
+      "tracking": -0.055,
+      "leading": 0.9,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.93,
+      "top": 610,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Sobre mí",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 34,
+      "vw": 4.4,
+      "font": "Geist",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.93,
+      "top": 1124,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Del panel al teléfono",
+      "words": 4,
+      "chars": 21,
+      "lines": 1,
+      "size": 34,
+      "vw": 4.4,
+      "font": "Geist",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.93,
+      "top": 2287,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "9:41",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 58,
+      "vw": 7.6,
+      "font": "Geist",
+      "weight": 300,
+      "tracking": -0.04,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "right",
+      "widthRatio": 0.3,
+      "top": 2738,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Trabajo:",
+      "words": 1,
+      "chars": 8,
+      "lines": 1,
+      "size": 34,
+      "vw": 4.4,
+      "font": "Geist",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.15,
+      "top": 3430,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Plataforma de créditos,",
+      "words": 3,
+      "chars": 23,
+      "lines": 1,
+      "size": 34,
+      "vw": 4.4,
+      "font": "Geist",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.45,
+      "top": 3430,
+      "tag": "li",
+      "kind": "statement"
+     },
+     {
+      "text": "Candado MDM ,",
+      "words": 3,
+      "chars": 13,
+      "lines": 2,
+      "size": 34,
+      "vw": 4.4,
+      "font": "Geist",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.91,
+      "top": 3430,
+      "tag": "li",
+      "kind": "statement"
+     },
+     {
+      "text": "Soporte Android ,",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 34,
+      "vw": 4.4,
+      "font": "Geist",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.4,
+      "top": 3468,
+      "tag": "li",
+      "kind": "statement"
+     },
+     {
+      "text": "Sitio web corporativo,",
+      "words": 3,
+      "chars": 22,
+      "lines": 1,
+      "size": 34,
+      "vw": 4.4,
+      "font": "Geist",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.41,
+      "top": 3468,
+      "tag": "li",
+      "kind": "statement"
+     },
+     {
+      "text": "Herramientas internas,",
+      "words": 2,
+      "chars": 22,
+      "lines": 1,
+      "size": 34,
+      "vw": 4.4,
+      "font": "Geist",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.44,
+      "top": 3506,
+      "tag": "li",
+      "kind": "statement"
+     },
+     {
+      "text": "Este portafolio.",
+      "words": 2,
+      "chars": 16,
+      "lines": 1,
+      "size": 34,
+      "vw": 4.4,
+      "font": "Geist",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.29,
+      "top": 3506,
+      "tag": "li",
+      "kind": "statement"
+     },
+     {
+      "text": "Con qué trabajo",
+      "words": 3,
+      "chars": 15,
+      "lines": 1,
+      "size": 34,
+      "vw": 4.4,
+      "font": "Geist",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.93,
+      "top": 4184,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Hablemos",
+      "words": 1,
+      "chars": 8,
+      "lines": 1,
+      "size": 34,
+      "vw": 4.4,
+      "font": "Geist",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.93,
+      "top": 5298,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "tu-email@ejemplo.com",
+      "words": 1,
+      "chars": 20,
+      "lines": 2,
+      "size": 80.6,
+      "vw": 10.5,
+      "font": "Geist",
+      "weight": 400,
+      "tracking": -0.045,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.93,
+      "top": 5951,
+      "tag": "a",
+      "kind": "heading"
+     },
+     {
+      "text": "Jhon Paucar",
+      "words": 2,
+      "chars": 11,
+      "lines": 1,
+      "size": 133.8,
+      "vw": 17.4,
+      "font": "Geist",
+      "weight": 500,
+      "tracking": -0.06,
+      "leading": 0.82,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.93,
+      "top": 6153,
+      "tag": "p",
+      "kind": "statement"
+     }
+    ],
+    "headingSummary": {
+     "count": 15,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 7,
+     "centered": 1,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Geist",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      14,
+      15,
+      16,
+      18,
+      20,
+      34,
+      81,
+      103,
+      134
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": {
+      "font": "Geist",
+      "size": 20,
+      "leading": 1.38,
+      "weight": 400,
+      "tracking": -0.01,
+      "contrast": 17.4
+     },
+     "measureChars": 68,
+     "max": {
+      "size": 133.8,
+      "vw": 17.4,
+      "font": "Geist",
+      "text": "Jhon Paucar"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.02,
+     "centerShare": 0.02,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ffffff",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#c9f0dc",
+       "top": 2215,
+       "hsl": {
+        "h": 149,
+        "s": 0.57,
+        "l": 0.86
+       }
+      },
+      {
+       "color": "#171a20",
+       "top": 5234,
+       "hsl": {
+        "h": 220,
+        "s": 0.16,
+        "l": 0.11
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#171a20",
+       "share": 0.52
+      },
+      {
+       "color": "#5c5e62",
+       "share": 0.19
+      },
+      {
+       "color": "#a3a6ab",
+       "share": 0.08
+      },
+      {
+       "color": "#0d2a1f",
+       "share": 0.07
+      },
+      {
+       "color": "#f4f4f4",
+       "share": 0.06
+      }
+     ],
+     "button": {
+      "bg": "#d9f5e6",
+      "hsl": {
+       "h": 148,
+       "s": 0.58,
+       "l": 0.91
+      },
+      "fg": "#0d2a1f"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 5,
+     "inHero": 1,
+     "radius": 4,
+     "height": 52,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Ver mi trabajo"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 4,
+     "boxRadius": 8,
+     "squareMedia": 1,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 1,
+     "fixed": false,
+     "height": 80,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "geist",
+     "geist fallback"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 6911,
+    "margins": {
+     "left": 26,
+     "right": 26
+    },
+    "sections": [
+     {
+      "sel": "div.page-fade",
+      "tag": "div",
+      "top": 80,
+      "height": 6073,
+      "words": 452,
+      "media": 3,
+      "middle": 0,
+      "heading": {
+       "text": "Del código",
+       "size": 103,
+       "tag": "h1"
+      },
+      "left": 26,
+      "right": 26,
+      "textLeft": 26,
+      "textRight": 26,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.site-footer",
+      "tag": "footer",
+      "top": 6153,
+      "height": 758,
+      "words": 50,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Jhon Paucar",
+       "size": 134,
+       "tag": "p"
+      },
+      "left": 26,
+      "right": 41,
+      "textLeft": 26,
+      "textRight": 41,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [
+     {
+      "top": 64,
+      "height": 544
+     }
+    ],
+    "h1s": [
+     {
+      "text": "Del código al dispositivo.",
+      "size": 103,
+      "top": 610,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 26,
+      "n": 12
+     }
+    ],
+    "leftBlocks": 12,
+    "bodySize": 20,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 10,
+   "filled": [
+    0.27,
+    0.33,
+    0.61,
+    0.75,
+    0.67,
+    0.61,
+    0.23,
+    0.23,
+    1,
+    1
+   ],
+   "motion": {
+    "elements": 7,
+    "css": 7,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 8354,
+     "screens": 9.9,
+     "words": 517,
+     "img": 5,
+     "video": 0,
+     "canvas": 0,
+     "svg": 1,
+     "sections": 6,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 2,
+     "uiAbuse": false,
+     "realPictures": 3,
+     "videoCount": 0,
+     "uiPictures": 1,
+     "pictureSamples": [
+      "image?url=%2Fimages%2Fworld%2Frepair-lab-4811581",
+      "image?url=%2Fimages%2Fworld%2Fplaca-movil.jpg&w=",
+      "image?url=%2Fimages%2Fworld%2Frepair-lab-4811581"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Del código al dispositivo.",
+     "words": 4,
+     "chars": 26,
+     "lines": 2,
+     "size": 52.3,
+     "vw": 13.4,
+     "font": "Geist",
+     "weight": 500,
+     "tracking": -0.055,
+     "leading": 0.9,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.9,
+     "top": 521,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Del código al dispositivo.",
+     "words": 4,
+     "lines": 2,
+     "size": 52.3,
+     "font": "Geist"
+    },
+    "headings": [
+     {
+      "text": "Del código al dispositivo.",
+      "words": 4,
+      "chars": 26,
+      "lines": 2,
+      "size": 52.3,
+      "vw": 13.4,
+      "font": "Geist",
+      "weight": 500,
+      "tracking": -0.055,
+      "leading": 0.9,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 521,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Sobre mí",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 34,
+      "vw": 8.7,
+      "font": "Geist",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 940,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Del panel al teléfono",
+      "words": 4,
+      "chars": 21,
+      "lines": 1,
+      "size": 34,
+      "vw": 8.7,
+      "font": "Geist",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 2279,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "9:41",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 58,
+      "vw": 14.9,
+      "font": "Geist",
+      "weight": 300,
+      "tracking": -0.04,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.6,
+      "top": 3127,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Trabajo:",
+      "words": 1,
+      "chars": 8,
+      "lines": 1,
+      "size": 34,
+      "vw": 8.7,
+      "font": "Geist",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.3,
+      "top": 3815,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Plataforma de créditos,",
+      "words": 3,
+      "chars": 23,
+      "lines": 2,
+      "size": 34,
+      "vw": 8.7,
+      "font": "Geist",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.86,
+      "top": 3815,
+      "tag": "li",
+      "kind": "statement"
+     },
+     {
+      "text": "Candado MDM ,",
+      "words": 3,
+      "chars": 13,
+      "lines": 2,
+      "size": 34,
+      "vw": 8.7,
+      "font": "Geist",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.68,
+      "top": 3854,
+      "tag": "li",
+      "kind": "statement"
+     },
+     {
+      "text": "Soporte Android ,",
+      "words": 3,
+      "chars": 17,
+      "lines": 2,
+      "size": 34,
+      "vw": 8.7,
+      "font": "Geist",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.68,
+      "top": 3892,
+      "tag": "li",
+      "kind": "statement"
+     },
+     {
+      "text": "Sitio web corporativo,",
+      "words": 3,
+      "chars": 22,
+      "lines": 2,
+      "size": 34,
+      "vw": 8.7,
+      "font": "Geist",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.82,
+      "top": 3930,
+      "tag": "li",
+      "kind": "statement"
+     },
+     {
+      "text": "Herramientas internas,",
+      "words": 2,
+      "chars": 22,
+      "lines": 1,
+      "size": 34,
+      "vw": 8.7,
+      "font": "Geist",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.85,
+      "top": 4006,
+      "tag": "li",
+      "kind": "statement"
+     },
+     {
+      "text": "Este portafolio.",
+      "words": 2,
+      "chars": 16,
+      "lines": 1,
+      "size": 34,
+      "vw": 8.7,
+      "font": "Geist",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1.12,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.57,
+      "top": 4044,
+      "tag": "li",
+      "kind": "statement"
+     },
+     {
+      "text": "Con qué trabajo",
+      "words": 3,
+      "chars": 15,
+      "lines": 1,
+      "size": 34,
+      "vw": 8.7,
+      "font": "Geist",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 5034,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Hablemos",
+      "words": 1,
+      "chars": 8,
+      "lines": 1,
+      "size": 34,
+      "vw": 8.7,
+      "font": "Geist",
+      "weight": 500,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 6792,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "tu-email@ejemplo.com",
+      "words": 1,
+      "chars": 20,
+      "lines": 2,
+      "size": 41,
+      "vw": 10.5,
+      "font": "Geist",
+      "weight": 400,
+      "tracking": -0.045,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 7508,
+      "tag": "a",
+      "kind": "heading"
+     },
+     {
+      "text": "Jhon Paucar",
+      "words": 2,
+      "chars": 11,
+      "lines": 1,
+      "size": 65.4,
+      "vw": 16.8,
+      "font": "Geist",
+      "weight": 500,
+      "tracking": -0.06,
+      "leading": 0.82,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.9,
+      "top": 7630,
+      "tag": "p",
+      "kind": "statement"
+     }
+    ],
+    "headingSummary": {
+     "count": 15,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 7,
+     "centered": 1,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Geist",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      14,
+      15,
+      16,
+      18,
+      20,
+      34,
+      41,
+      52,
+      65
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": {
+      "font": "Geist",
+      "size": 20,
+      "leading": 1.38,
+      "weight": 400,
+      "tracking": -0.01,
+      "contrast": 17.4
+     },
+     "measureChars": 35,
+     "max": {
+      "size": 65.4,
+      "vw": 16.8,
+      "font": "Geist",
+      "text": "Jhon Paucar"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.02,
+     "centerShare": 0.02,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ffffff",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#c9f0dc",
+       "top": 2207,
+       "hsl": {
+        "h": 149,
+        "s": 0.57,
+        "l": 0.86
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 2657,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#0d0f12",
+       "top": 3060,
+       "hsl": {
+        "h": 216,
+        "s": 0.16,
+        "l": 0.06
+       }
+      },
+      {
+       "color": "#2a1414",
+       "top": 3070,
+       "hsl": {
+        "h": 0,
+        "s": 0.35,
+        "l": 0.12
+       }
+      },
+      {
+       "color": "#171a20",
+       "top": 6728,
+       "hsl": {
+        "h": 220,
+        "s": 0.16,
+        "l": 0.11
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#171a20",
+       "share": 0.4
+      },
+      {
+       "color": "#5c5e62",
+       "share": 0.31
+      },
+      {
+       "color": "#a3a6ab",
+       "share": 0.08
+      },
+      {
+       "color": "#0d2a1f",
+       "share": 0.07
+      },
+      {
+       "color": "#f4f4f4",
+       "share": 0.06
+      }
+     ],
+     "button": {
+      "bg": "#d9f5e6",
+      "hsl": {
+       "h": 148,
+       "s": 0.58,
+       "l": 0.91
+      },
+      "fg": "#0d2a1f"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 5,
+     "inHero": 1,
+     "radius": 4,
+     "height": 52,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Ver mi trabajo"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 4,
+     "boxRadius": 8,
+     "squareMedia": 1,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": {
+     "links": 1,
+     "fixed": false,
+     "height": 80,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "geist",
+     "geist fallback"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 8354,
+    "margins": {
+     "left": 20,
+     "right": 20
+    },
+    "sections": [
+     {
+      "sel": "div.page-fade",
+      "tag": "div",
+      "top": 80,
+      "height": 7550,
+      "words": 452,
+      "media": 3,
+      "middle": 0,
+      "heading": {
+       "text": "9:41",
+       "size": 58,
+       "tag": "div"
+      },
+      "left": 20,
+      "right": 20,
+      "textLeft": 20,
+      "textRight": 20,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.site-footer",
+      "tag": "footer",
+      "top": 7630,
+      "height": 724,
+      "words": 50,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Jhon Paucar",
+       "size": 65,
+       "tag": "p"
+      },
+      "left": 20,
+      "right": 27,
+      "textLeft": 20,
+      "textRight": 27,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [
+     {
+      "top": 64,
+      "height": 456
+     }
+    ],
+    "h1s": [
+     {
+      "text": "Del código al dispositivo.",
+      "size": 52,
+      "top": 521,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 20,
+      "n": 12
+     }
+    ],
+    "leftBlocks": 12,
+    "bodySize": 20,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "FAIL",
+   "id": "still-page",
+   "width": 1440,
+   "message": "Only 7 element(s) moved while the page loaded and scrolled.",
+   "fix": "Build the motion layer (SKILL.md step 9, references/motion.md): the signature move, an entrance for the parts of every section, feedback on every control, and one moving picture. Transform and opacity only, with a reduced-motion fallback."
+  },
+  {
+   "level": "WARN",
+   "id": "blank-gap",
+   "width": 768,
+   "message": "A 544px stretch at 64px holds nothing.",
+   "fix": "Check that it is a deliberate rest (once per page at most); otherwise close it to the normal section gap.",
+   "alsoAt": [
+    390
+   ]
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "C:\\Users\\USER\\portafolio-jp\\.taste-skill\\after\\desktop-fold.jpg",
+   "pages": [
+    "C:\\Users\\USER\\portafolio-jp\\.taste-skill\\after\\desktop-page-01.jpg",
+    "C:\\Users\\USER\\portafolio-jp\\.taste-skill\\after\\desktop-page-02.jpg",
+    "C:\\Users\\USER\\portafolio-jp\\.taste-skill\\after\\desktop-page-03.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "C:\\Users\\USER\\portafolio-jp\\.taste-skill\\after\\tablet-fold.jpg",
+   "pages": [
+    "C:\\Users\\USER\\portafolio-jp\\.taste-skill\\after\\tablet-page-01.jpg",
+    "C:\\Users\\USER\\portafolio-jp\\.taste-skill\\after\\tablet-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "C:\\Users\\USER\\portafolio-jp\\.taste-skill\\after\\mobile-fold.jpg",
+   "pages": [
+    "C:\\Users\\USER\\portafolio-jp\\.taste-skill\\after\\mobile-page-01.jpg",
+    "C:\\Users\\USER\\portafolio-jp\\.taste-skill\\after\\mobile-page-02.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

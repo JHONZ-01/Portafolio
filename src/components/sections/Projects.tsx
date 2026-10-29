@@ -1,81 +1,58 @@
 "use client";
 
-import { useMemo } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
-import { Card } from "@/components/ui/Card";
-import { SocialLinks } from "@/components/ui/SocialLinks";
+import { content } from "@/lib/content";
 import { useT } from "@/lib/i18n/useT";
+import { photos } from "@/lib/photos";
+
+/** Recorte pequeño que acompaña a algunos nombres del índice. */
+const FRAMES: Partial<Record<string, { src: string; pos: string }>> = {
+  candado: { src: photos.repairBench.src, pos: "38% 74%" },
+  soporte: { src: photos.phoneBoard.src, pos: "55% 40%" },};
 
 export function Projects() {
-  const { t } = useT();
-
-  const cards = useMemo(
-    () =>
-      [
-        {
-          title: t("sections.featuredProjects.c1.title"),
-          description: t("sections.featuredProjects.c1.description"),
-          href: "/projects" as const,
-        },
-        {
-          title: t("sections.featuredProjects.c2.title"),
-          description: t("sections.featuredProjects.c2.description"),
-          href: "/projects" as const,
-        },
-        {
-          title: t("sections.featuredProjects.c3.title"),
-          description: t("sections.featuredProjects.c3.description"),
-          href: "/projects" as const,
-        },
-      ] as const,
-    [t],
-  );
+  const { t, lang } = useT();
+  const c = content[lang];
 
   return (
-    <section className="py-12">
-      <div className="flex items-end justify-between gap-4">
-        <div>
-          <h2 className="text-2xl font-semibold tracking-tight text-[var(--text-primary)]">
-            {t("sections.featuredProjects.title")}
-          </h2>
-          <p className="mt-2 text-[var(--text-secondary)]">
-            {t("sections.featuredProjects.subtitle")}
-          </p>
-        </div>
-        <div className="hidden items-center gap-4 sm:flex">
-          <SocialLinks size="sm" />
-          <Link
-            href="/projects"
-            className="text-sm font-medium text-[var(--text-primary)] underline-offset-4 hover:underline"
-          >
-            {t("sections.featuredProjects.viewAll")}
-          </Link>
-        </div>
-      </div>
-
-      <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {cards.map((p) => (
-          <Card key={p.title} className="flex flex-col gap-3">
-            <div className="space-y-1">
-              <h3 className="text-base font-semibold text-[var(--text-primary)]">
-                {p.title}
-              </h3>
-              <p className="text-sm leading-6 text-[var(--text-secondary)]">
-                {p.description}
-              </p>
-            </div>
-            <div className="mt-auto">
-              <Link
-                href={p.href}
-                className="text-sm font-medium text-[var(--text-primary)] underline-offset-4 hover:underline"
-              >
-                {t("sections.featuredProjects.detailCta")}
+    <section id="trabajo" className="section work" aria-labelledby="work-title">
+      <ul className="work__names" data-reveal>
+        <li>
+          <h2 id="work-title" className="lead" style={{ display: "inline", font: "inherit" }}>
+            {t("sections.work.title")}
+          </h2>{" "}
+        </li>
+        {c.projects.map((p, i) => {
+          const frame = FRAMES[p.id];
+          return (
+            <li key={p.id}>
+              <Link href={`/projects#${p.id}`}>
+                {p.name}
+                {frame ? (
+                  <span className="work__frame" aria-hidden="true">
+                    <Image
+                      src={frame.src}
+                      alt=""
+                      width={240}
+                      height={150}
+                      style={{ objectPosition: frame.pos }}
+                    />
+                  </span>
+                ) : null}
               </Link>
-            </div>
-          </Card>
-        ))}
-      </div>
+              {i < c.projects.length - 1 ? ", " : "."}
+            </li>
+          );
+        })}
+      </ul>
+      <p className="work__meta" data-reveal style={{ ["--d" as string]: 1 }}>
+        {c.workMeta}{" "}
+        <Link href="/projects" className="link" style={{ color: "var(--ink)" }}>
+          {t("nav.projects")} →
+        </Link>
+      </p>
     </section>
   );
 }

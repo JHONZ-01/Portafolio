@@ -1,44 +1,51 @@
 "use client";
 
-import { CircuitFxCanvas } from "@/components/layout/CircuitFxCanvas";
-import { Card } from "@/components/ui/Card";
-import { SocialLinks } from "@/components/ui/SocialLinks";
+import { content } from "@/lib/content";
 import { useT } from "@/lib/i18n/useT";
 
-export function About() {
-  const { t } = useT();
+export function About({ titled = true }: { titled?: boolean }) {
+  const { t, lang } = useT();
+  const c = content[lang];
 
   return (
-    <section className="py-12">
-      <div className="flex items-end justify-between gap-4">
-        <div>
-          <h2 className="text-2xl font-semibold tracking-tight text-[var(--text-primary)]">
-            {t("sections.about.title")}
-          </h2>
-          <p className="mt-2 text-[var(--text-secondary)]">
-            {t("sections.about.subtitle")}
-          </p>
-        </div>
-        <div className="hidden items-center gap-4 sm:flex">
-          <SocialLinks size="sm" />
-          <div className="font-mono text-sm text-[var(--text-muted)]">{"<about />"}</div>
-        </div>
-      </div>
+    <section className="section about" aria-labelledby="about-title">
+      <h2
+        id="about-title"
+        className={titled ? "section-title about__title" : "sr-only"}
+        data-reveal
+      >
+        {t("sections.about.title")}
+      </h2>
 
-      <div className="mt-6">
-        <Card className="relative mx-auto max-w-3xl overflow-hidden border-transparent">
-          <CircuitFxCanvas
-            mode="border"
-            borderVariant="perimeter"
-            borderInsetPx={1}
-            particleCount={44}
-            glowBlur={8}
-            className="opacity-100"
-          />
-          <p className="relative z-10 text-sm leading-7 text-[var(--text-secondary)]">
-            {t("sections.about.body")}
-          </p>
-        </Card>
+      <dl className="about__facts">
+        {c.facts.map((f, i) => (
+          <div key={f.label} data-reveal style={{ ["--d" as string]: i + 1 }}>
+            <dt>{f.label}</dt>
+            <dd>{f.value}</dd>
+          </div>
+        ))}
+      </dl>
+      <p className="about__text" data-reveal style={{ ["--d" as string]: 2 }}>
+        {c.aboutText}
+      </p>
+
+      <p className="about__record-label" data-reveal>
+        {c.recordLabel}
+      </p>
+      <div className="about__lists">
+        {[c.jobList, c.studyList].map((list, i) => (
+          <div key={list.title} className="record">
+            <h3>{list.title}</h3>
+            <ul>
+              {list.items.map(([name, when], j) => (
+                <li key={name} data-reveal style={{ ["--d" as string]: i + j }}>
+                  <span>{name}</span>
+                  <span>{when}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </section>
   );

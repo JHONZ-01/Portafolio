@@ -1,28 +1,28 @@
 import type { Metadata } from "next";
-import { Fira_Code, Tajawal } from "next/font/google";
+import { Geist } from "next/font/google";
 import "../styles/globals.css";
 import "../styles/portfolio.css";
+import "../styles/projects-showcase.css";
 import { AppPreferencesProvider } from "@/components/providers/AppPreferencesProvider";
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
-import { PageBackground } from "@/components/layout/PageBackground";
 import { PageTransition } from "@/components/layout/PageTransition";
+import { RevealObserver } from "@/components/layout/RevealObserver";
 
-const fontPrimary = Tajawal({
+const fontPrimary = Geist({
   variable: "--font-primary",
-  subsets: ["latin", "arabic"],
-  weight: ["300", "400", "500", "700", "800", "900"],
-});
-
-const fontCode = Fira_Code({
-  variable: "--font-code",
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
-  title: "Portafolio",
-  description: "Portafolio profesional",
+  title: "Jhon Paucar · Programador junior",
+  description:
+    "Portafolio de Jhon Paucar: desarrollo la plataforma de créditos de una empresa de celulares y configuro los teléfonos que dependen de ella.",
 };
+
+// Aplica tema guardado y marca que hay JS antes del primer pintado.
+const bootScript = `(function(){try{document.documentElement.classList.add('js');var t=localStorage.getItem('portfolio-theme');if(t==='dark'||t==='light'){document.body.setAttribute('data-theme',t);}}catch(e){}})();`;
 
 export default function RootLayout({
   children,
@@ -32,20 +32,18 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${fontPrimary.variable} ${fontCode.variable} h-full antialiased`}
+      className={`${fontPrimary.variable} antialiased`}
+      suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col">
+      <body data-theme="light" suppressHydrationWarning>
+        <script dangerouslySetInnerHTML={{ __html: bootScript }} />
         <AppPreferencesProvider>
-          <div className="relative min-h-full bg-[var(--bg-dark)] font-sans">
-            <PageBackground />
-            <Navbar />
-            <PageTransition>
-              <main className="mx-auto w-full max-w-5xl px-6">
-                {children}
-              </main>
-            </PageTransition>
-            <Footer />
-          </div>
+          <Navbar />
+          <PageTransition>
+            <main id="main">{children}</main>
+          </PageTransition>
+          <Footer />
+          <RevealObserver />
         </AppPreferencesProvider>
       </body>
     </html>

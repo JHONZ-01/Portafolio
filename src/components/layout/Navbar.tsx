@@ -4,139 +4,104 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { Languages, Menu, Moon, Sun, X } from "lucide-react";
-
-import { cn } from "@/lib/utils";
 import { useAppPreferences } from "@/components/providers/AppPreferencesProvider";
 import { useT } from "@/lib/i18n/useT";
 
 const navItems = [
-  { href: "/", labelKey: "nav.home" as const },
-  { href: "/about", labelKey: "nav.about" as const },
   { href: "/projects", labelKey: "nav.projects" as const },
+  { href: "/about", labelKey: "nav.about" as const },
   { href: "/cv", labelKey: "nav.cv" as const },
 ] as const;
 
 export function Navbar() {
   const pathname = usePathname();
-  const { theme, toggleTheme, lang, toggleLang, dir } = useAppPreferences();
-  const [open, setOpen] = useState(false);
+  const { theme, toggleTheme, toggleLang } = useAppPreferences();
+  // El menú queda abierto solo en la ruta donde se abrió.
+  const [openOn, setOpenOn] = useState<string | null>(null);
+  const open = openOn === pathname;
   const { t } = useT();
 
+  const themeLabel = theme === "dark" ? t("actions.themeLight") : t("actions.themeDark");
+
   return (
-    <>
-      <header className="glass fixed inset-x-0 top-0 z-50">
-        <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-6 py-5">
-        <Link
-          href="/"
-          className="font-semibold tracking-tight text-[var(--text-primary)]"
-        >
+    <header id="top">
+      <div className="site-header">
+        <Link href="/" className="site-header__mark link">
           {t("brand")}
         </Link>
 
-        <div className="flex items-center gap-2">
-          <nav
-            className="hidden items-center gap-1 md:flex"
-            aria-label={t("brand")}
-          >
-            {navItems.map((item) => {
-              const isActive = pathname === item.href;
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={cn(
-                    "glass-soft rounded-xl px-3 py-2 text-sm font-medium transition-colors",
-                    "text-[var(--text-secondary)] hover:text-[var(--text-primary)]",
-                    { "text-[var(--text-primary)] ring-1 ring-[var(--border)]": isActive },
-                  )}
-                  aria-current={isActive ? "page" : undefined}
-                >
-                  {t(item.labelKey)}
-                </Link>
-              );
-            })}
-          </nav>
+        <nav className="site-header__nav" aria-label={t("nav.label")}>
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="link"
+              aria-current={pathname === item.href ? "page" : undefined}
+            >
+              {t(item.labelKey)}
+            </Link>
+          ))}
+        </nav>
 
+        <div className="site-header__tools">
           <button
             type="button"
+            className="tool"
             onClick={toggleLang}
-            className="glass-soft inline-flex h-11 w-11 items-center justify-center rounded-xl text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]"
             aria-label={t("actions.toggleLang")}
-            title={t("actions.toggleLang")}
           >
-            <div className="flex items-center gap-1">
-              <Languages className="h-5 w-5" />
-              <span className="hidden text-xs font-semibold sm:inline">
-                {lang.toUpperCase()}
-              </span>
-            </div>
+            {t("actions.langOther")}
           </button>
-
           <button
             type="button"
+            className="tool"
             onClick={toggleTheme}
-            className="glass-soft inline-flex h-11 w-11 items-center justify-center rounded-xl text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]"
             aria-label={t("actions.toggleTheme")}
-            title={t("actions.toggleTheme")}
           >
-            {theme === "dark" ? (
-              <Sun className="h-5 w-5" />
-            ) : (
-              <Moon className="h-5 w-5" />
-            )}
+            {themeLabel}
           </button>
-
+          <Link href="/#contacto" className="btn btn--primary">
+            {t("nav.contact")}
+          </Link>
           <button
             type="button"
-            onClick={() => setOpen((v) => !v)}
-            className="glass-soft inline-flex h-11 w-11 items-center justify-center rounded-xl text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)] md:hidden"
-            aria-label="Abrir menú"
+            className="tool site-header__menu"
+            onClick={() => setOpenOn(open ? null : pathname)}
+            aria-expanded={open}
             aria-controls="mobile-menu"
           >
-            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            {open ? t("nav.close") : t("nav.menu")}
           </button>
         </div>
       </div>
 
-      <div
+      <nav
         id="mobile-menu"
-        className={cn(
-          "md:hidden",
-          open
-            ? "glass border-t border-[var(--border)]"
-            : "hidden",
-        )}
+        className="mobile-menu"
+        data-open={open}
+        aria-label={t("nav.label")}
       >
-        <nav className="mx-auto w-full max-w-5xl px-6 py-3" aria-label="Navegación móvil">
-          <div className="flex flex-col gap-1">
-            {navItems.map((item) => {
-              const isActive = pathname === item.href;
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setOpen(false)}
-                  className={cn(
-                    "glass-soft rounded-xl px-3 py-3 text-sm font-medium transition-colors",
-                    "text-[var(--text-secondary)] hover:text-[var(--text-primary)]",
-                    { "text-[var(--text-primary)] ring-1 ring-[var(--border)]": isActive },
-                  )}
-                  aria-current={isActive ? "page" : undefined}
-                >
-                  {t(item.labelKey)}
-                </Link>
-              );
-            })}
-            <div className="mt-2 text-xs text-[var(--text-muted)]">
-              Preferencias: idioma <span className="font-medium">{lang.toUpperCase()}</span> · dirección{" "}
-              <span className="font-medium">{dir.toUpperCase()}</span>
-            </div>
-          </div>
-        </nav>
-      </div>
-      </header>
-      <div className="h-[92px]" aria-hidden="true" />
-    </>
+        <ul onClick={() => setOpenOn(null)}>
+          <li>
+            <Link href="/" aria-current={pathname === "/" ? "page" : undefined}>
+              {t("nav.home")}
+            </Link>
+          </li>
+          {navItems.map((item) => (
+            <li key={item.href}>
+              <Link
+                href={item.href}
+                aria-current={pathname === item.href ? "page" : undefined}
+              >
+                {t(item.labelKey)}
+              </Link>
+            </li>
+          ))}
+          <li>
+            <Link href="/#contacto">{t("nav.contact")}</Link>
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
 }

@@ -1,9 +1,8 @@
 "use client";
 
 import * as React from "react";
+import Link from "next/link";
 
-import { Button } from "@/components/ui/Button";
-import { Card } from "@/components/ui/Card";
 import { useAppPreferences } from "@/components/providers/AppPreferencesProvider";
 import { useT } from "@/lib/i18n/useT";
 
@@ -13,11 +12,31 @@ function getCvUrl(lang: "es" | "en") {
     : "/cv/Jhon-Paucar-CV-EN.pdf";
 }
 
+type Availability = "checking" | "ready" | "missing";
+
 export function CvViewer() {
   const { lang } = useAppPreferences();
   const { t } = useT();
   const src = getCvUrl(lang);
   const iframeRef = React.useRef<HTMLIFrameElement | null>(null);
+  const [checked, setChecked] = React.useState<{ src: string; ok: boolean } | null>(null);
+  const availability: Availability =
+    checked?.src !== src ? "checking" : checked.ok ? "ready" : "missing";
+
+  React.useEffect(() => {
+    let cancelled = false;
+    fetch(src, { method: "HEAD" })
+      .then((res) => {
+        const isPdf = res.headers.get("content-type")?.includes("pdf") ?? false;
+        if (!cancelled) setChecked({ src, ok: res.ok && isPdf });
+      })
+      .catch(() => {
+        if (!cancelled) setChecked({ src, ok: false });
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [src]);
 
   function onPrint() {
     const win = iframeRef.current?.contentWindow;
@@ -29,35 +48,42 @@ export function CvViewer() {
     window.open(src, "_blank", "noopener,noreferrer");
   }
 
-  return (
-    <section className="mt-8 space-y-4">
-      <div className="flex flex-wrap items-center gap-3">
-        <a href={src} download>
-          <Button>{t("cv.actions.download")}</Button>
-        </a>
-        <Button variant="secondary" onClick={onPrint}>
-          {t("cv.actions.print")}
-        </Button>
-        <a href={src} target="_blank" rel="noreferrer">
-          <Button variant="ghost">{t("cv.actions.open")}</Button>
-        </a>
-        <div className="ml-auto font-mono text-xs text-[var(--text-muted)]">
-          {lang.toUpperCase()}
+  if (availability === "missing") {
+    return (
+      <section className="section cv" aria-label={t("pages.cv.title")}>
+        <div className="cv__missing">
+          <p>{t("cv.missing")}</p>
+          <div>
+            <Link href="/about" className="btn btn--primary">
+              {t("cv.missingCta")}
+            </Link>
+          </div>
         </div>
+      </section>
+    );
+  }
+
+  return (
+    <section className="section cv" aria-label={t("pages.cv.title")}>
+      <div className="cv__bar">
+        <a href={src} download className="btn btn--primary">
+          {t("cv.actions.download")}
+        </a>
+        <button type="button" className="btn btn--secondary" onClick={onPrint}>
+          {t("cv.actions.print")}
+        </button>
+        <a href={src} target="_blank" rel="noreferrer" className="btn btn--ghost link">
+          {t("cv.actions.open")}
+        </a>
       </div>
 
-      <Card className="overflow-hidden p-0">
-        <iframe
-          ref={iframeRef}
-          src={src}
-          title="CV"
-          className="h-[75vh] w-full border-0"
-        />
-        <div className="p-6 text-sm text-[var(--text-muted)]">
-          {t("cv.missing")}
-        </div>
-      </Card>
+      <div className="cv__frame">
+        {availability === "ready" ? (
+          <iframe ref={iframeRef} src={src} title={t("pages.cv.title")} />
+        ) : (
+          <div style={{ height: "80vh" }} />
+        )}
+      </div>
     </section>
   );
 }
-

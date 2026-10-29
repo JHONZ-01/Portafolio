@@ -1,24 +1,22 @@
 import { About } from "@/components/sections/About";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { Hero } from "@/components/sections/Hero";
-import { Experience } from "@/components/sections/Experience";
-import { InitialLoader } from "@/components/sections/InitialLoader";
+import { HomePhoto } from "@/components/sections/HomePhoto";
+import { PhoneDemo } from "@/components/sections/PhoneDemo";
 import { Projects } from "@/components/sections/Projects";
 import { Skills } from "@/components/sections/Skills";
-import { Languages } from "@/components/sections/Languages";
 
 export const dynamic = "force-static";
 
 export default function Home() {
   return (
     <>
-      <InitialLoader />
       <Hero />
       <About />
-      <Skills />
-      <Languages />
-      <Experience />
+      <PhoneDemo />
       <Projects />
+      <HomePhoto />
+      <Skills />
       <ContactForm />
     </>
   );

@@ -1,18 +1,19 @@
-import { About } from "@/components/sections/About";
-import { Experience } from "@/components/sections/Experience";
-import { Skills } from "@/components/sections/Skills";
 import { PageHeader } from "@/components/pages/PageHeader";
-import { Languages } from "@/components/sections/Languages";
+import { About } from "@/components/sections/About";
+import { AboutPhoto } from "@/components/sections/AboutPhoto";
+import { Experience } from "@/components/sections/Experience";
+import { Offer } from "@/components/sections/Offer";
+import { Skills } from "@/components/sections/Skills";
 
 export default function AboutPage() {
   return (
-    <div className="py-12">
-      <PageHeader titleKey="pages.about.title" subtitleKey="pages.about.subtitle" />
-
-      <About />
-      <Skills />
-      <Languages />
+    <>
+      <PageHeader titleKey="pages.about.title" subtitleKey="pages.about.lead" />
+      <About titled={false} />
       <Experience />
-    </div>
+      <AboutPhoto />
+      <Offer />
+      <Skills />
+    </>
   );
 }

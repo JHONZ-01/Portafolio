@@ -3,10 +3,9 @@ import { CvViewer } from "@/components/sections/CvViewer";
 
 export default function CvPage() {
   return (
-    <div className="py-12">
-      <PageHeader titleKey="pages.cv.title" subtitleKey="pages.cv.subtitle" />
+    <>
+      <PageHeader titleKey="pages.cv.title" subtitleKey="pages.cv.lead" />
       <CvViewer />
-    </div>
+    </>
   );
 }
-
